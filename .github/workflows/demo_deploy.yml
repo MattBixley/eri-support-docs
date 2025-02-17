@@ -3,10 +3,10 @@ on:
   pull_request:
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  TARGET_REPO: "support-docs-dev"
-  TARGET_OWNER: "CallumWalley"
+  TARGET_REPO: "eri-support-docs-dev"
+  TARGET_OWNER: "MattBixley"
   WORKFLOW_ID: "deploy.yml"
-  DEPLOY_URL: "https://callumwalley.github.io/support-docs-dev"
+  DEPLOY_URL: "https://mattbixley.github.io/eri-support-docs-dev"
   HEAD: ${{ github.event.pull_request.head.ref }}
 permissions: write-all
 jobs:

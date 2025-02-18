@@ -1,3 +1,10 @@
+"""
+mkdocs_hooks allows injection of variables into templating stage of rendering.
+This allows for arbitrary use of variables in TEMPLATE FILES, (e.g. `overrides/*.html`).
+As opposed to `macro_hooks.py` which injects variables into macro rendering (e.g. `docs/*.md`).
+If this is confusing, ask Cal to explain.
+"""
+
 import linkcheckmd as lc
 import proselint as pl
 import glob
@@ -13,8 +20,6 @@ def on_env(env, config, files, **kwargs):
     # add entire module list to keyword 'applications
     env.globals["applications"] = json.load(open(module_list_path))
     # take this out after site migration
-    env.globals["redirects"] = yaml.safe_load(open("docs/redirect_map_invert.yml"))
-
     # env.globals["domains"]=json.load(open('../tags/domains.json')).keys() # Needs list of cannon domains to make into
 
     # For image paths.

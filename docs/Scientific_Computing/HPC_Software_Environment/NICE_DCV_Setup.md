@@ -45,7 +45,7 @@ possible.
 #### On Māui
 
     1. Connect to the lander node following the instructions
-        [here](../../Getting_Started/Accessing_the_HPCs/Choosing_and_Configuring_Software_for_Connecting_to_the_Clusters.md).
+        [here](../../Getting_Started/Accessing_eRI/Choosing_and_Configuring_Software_for_Connecting_to_the_Clusters.md).
         For example:
 
         ``` sl

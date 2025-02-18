@@ -86,4 +86,4 @@ is relevant.
          after which you will be informed of the outcome.
      - We may contact you if further details are required.
      - When your project is approved you will be able to [set your Linux
-         Password](../../Getting_Started/Accessing_the_HPCs/Setting_Up_and_Resetting_Your_Password.md).
+         Password](../../Getting_Started/Accessing_eRI/Setting_Up_and_Resetting_Your_Password.md).

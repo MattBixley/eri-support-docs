@@ -8,7 +8,11 @@ markdown_extensions:
       title: On this page
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.tabbed:
@@ -72,6 +76,7 @@ theme:
     - content.code.copy
     - content.action.edit
     - header.site_name_homepage
+    
   language: en
   logo: assets/icons/logo.svg
   name: material

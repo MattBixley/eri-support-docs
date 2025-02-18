@@ -13,8 +13,8 @@ zendesk_section_id: 360000034315
 
 !!! prerequisite
     -  Have an [active account and project](../../Getting_Started/Accounts-Projects_and_Allocations/Creating_a_NeSI_Account_Profile.md).
-    -  Set up your [NeSI Account Password](../../Getting_Started/Accessing_the_HPCs/Setting_Up_and_Resetting_Your_Password.md).
-    -  Set up [Two-Factor Authentication](../../Getting_Started/Accessing_the_HPCs/Setting_Up_Two_Factor_Authentication.md).
+    -  Set up your [NeSI Account Password](../../Getting_Started/Accessing_eRI/Setting_Up_and_Resetting_Your_Password.md).
+    -  Set up [Two-Factor Authentication](../../Getting_Started/Accessing_eRI/Setting_Up_Two_Factor_Authentication.md).
 
 Before you can start submitting work you will need some way of
 connecting to the NeSI clusters.
@@ -79,7 +79,7 @@ different options, listed in order of preference.
        [WSL](../../Scientific_Computing/Terminal_Setup/Windows_Subsystem_for_Linux_WSL.md)
     -  Setting up the [Ubuntu Terminal](../../Scientific_Computing/Terminal_Setup/Ubuntu_LTS_terminal_Windows.md)
     -  Setting up
-       [X-Forwarding](../../Getting_Started/Accessing_the_HPCs/X_Forwarding_using_the_Ubuntu_Terminal_on_Windows.md)
+       [X-Forwarding](../../Getting_Started/Accessing_eRI/X_Forwarding_using_the_Ubuntu_Terminal_on_Windows.md)
 
 ### VSCode
 

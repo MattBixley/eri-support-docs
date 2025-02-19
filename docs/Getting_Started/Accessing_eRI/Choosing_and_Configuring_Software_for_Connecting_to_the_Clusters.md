@@ -7,17 +7,10 @@ tags:
 - login
 vote_count: 1
 vote_sum: 1
-zendesk_article_id: 360001016335
-zendesk_section_id: 360000034315
 ---
 
-!!! prerequisite
-    -  Have an [active account and project](../../Getting_Started/Accounts-Projects_and_Allocations/Creating_a_NeSI_Account_Profile.md).
-    -  Set up your [NeSI Account Password](../../Getting_Started/Accessing_eRI/Setting_Up_and_Resetting_Your_Password.md).
-    -  Set up [Two-Factor Authentication](../../Getting_Started/Accessing_eRI/Setting_Up_Two_Factor_Authentication.md).
-
 Before you can start submitting work you will need some way of
-connecting to the NeSI clusters.
+connecting to the eRI cluster.
 
 This is done by establishing an SSH (Secure SHell) connection, giving
 you access to a command line interface (bash) on the cluster. In order
@@ -27,16 +20,10 @@ operating system and level of experience.
 
 ## Web Browser
 
-### JupyterHub
+### OnDemand
 
- JupyterHub is a service providing access to Jupyter Notebooks on
- NeSI. A terminal similar to the other setups describe below can be
- accessed through the Jupyter Launcher.  
-
-!!! prerequisite "What next?"
-    -  More info on [Jupyter Terminal](../../Scientific_Computing/Interactive_computing_using_Jupyter/Jupyter_on_NeSI.md#jupyter-term)
-    -  Visit [jupyter.nesi.org.nz](https://jupyter.nesi.org.nz/hub/).
-
+ OnDemand is a service providing access to Jupyter Notebooks, RStudio and other web based apps on eRI. It can be accessed through the web browser at [ondemand.eri.agresearch.co.nz](https://ondemand.eri.agresearch.co.nz/).
+   
 ## Linux or Mac OS
 
 ### Terminal

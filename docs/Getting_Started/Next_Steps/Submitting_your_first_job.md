@@ -24,7 +24,7 @@ For a full list of module commands run `man module`.
 
 ## Slurm
 
-Jobs on Mahuika and Māui are submitted in the form of a *batch script* containing the code you want to run and a header of information needed by our job scheduler *Slurm*.
+Jobs on eRI are submitted in the form of a *batch script* containing the code you want to run and a header of information needed by our job scheduler *Slurm*.
 
 ## Creating a batch script
 
@@ -87,7 +87,7 @@ squeue
 You can filter to just your jobs by adding the flag
 
 ```bash
-squeue -u usr9999
+squeue -u <userid>@agresearch.co.nz
 ```
 
 You can also filter to just your jobs using

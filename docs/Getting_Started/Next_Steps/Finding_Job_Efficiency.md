@@ -17,23 +17,24 @@ future.
 Once your job has finished check the relevant details using the tools:
 `nn_seff` or `sacct` For example:  
 
-### Using `nn_seff`
+### Using `seff`
 
 ```bash
 nn_seff 30479534
 ```
 
 ```txt
-Job ID: 1936245
-Cluster: mahuika
+Job ID: 123456
+Cluster: eri
 User/Group: user/group
 State: COMPLETED (exit code 0)
-Cores: 1
-Tasks: 1
 Nodes: 1
-Job Wall-time: 7.67% 00:01:09 of 00:15:00 time limit
-CPU Efficiency: 98.55% 00:01:08 of 00:01:09 core-walltime
-Mem Efficiency: 10.84% 111.00 MB of 1.00 GB
+Cores per node: 8
+CPU Utilized: 00:08:00
+CPU Efficiency: 85.71% of 00:09:20 core-walltime
+Job Wall-clock time: 00:01:10
+Memory Utilized: 808.25 MB
+Memory Efficiency: 8.08% of 10.00 GB
 ```
 
 Notice that the CPU efficiency was high but the memory efficiency was low and consideration should be given to reducing memory requests

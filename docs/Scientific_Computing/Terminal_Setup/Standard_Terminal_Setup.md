@@ -23,12 +23,12 @@ configurations.
     following (replacing **`username`** with your username):
 
     ```sh
-    Host login-0 login-0.eri.agresearch.co.nz
+    Host login-0
         HostName login-0.eri.agresearch.co.nz
         User <USERID>@agresearch.co.nz     # eg blogsj@agresearch.co.nz
         GSSAPIAuthentication yes
 
-    Host login-1 login-1.eri.agresearch.co.nz
+    Host login-1
         HostName login-1.eri.agresearch.co.nz
         User <USERID>@agresearch.co.nz     # eg blogsj@agresearch.co.nz
         GSSAPIAuthentication yes

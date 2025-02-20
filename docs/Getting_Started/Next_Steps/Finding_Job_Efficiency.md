@@ -15,12 +15,12 @@ completion, this way you can improve your job specifications in the
 future.
 
 Once your job has finished check the relevant details using the tools:
-`nn_seff` or `sacct` For example:  
+`seff` or `sacct` For example:  
 
 ### Using `seff`
 
 ```bash
-nn_seff 30479534
+seff 30479534
 ```
 
 ```txt

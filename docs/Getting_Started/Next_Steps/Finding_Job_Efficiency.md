@@ -20,7 +20,7 @@ Once your job has finished check the relevant details using the tools:
 ### Using `seff`
 
 ```bash
-seff 30479534
+seff 123456
 ```
 
 ```txt

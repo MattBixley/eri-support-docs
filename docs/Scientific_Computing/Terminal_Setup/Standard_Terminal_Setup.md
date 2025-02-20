@@ -1,18 +1,12 @@
 ---
-created_at: '2018-11-30T00:34:14Z'
+created_at: '2025-11-30T00:34:14Z'
 tags:
 - ssh
 - howto
-vote_count: 8
-vote_sum: 6
-zendesk_article_id: 360000625535
-zendesk_section_id: 360000189696
 ---
 
 !!! prerequisite
-     -   Have an [active account and project.](../../Getting_Started/Accounts-Projects_and_Allocations/Creating_a_NeSI_Account_Profile.md)
-     -   Set up your [Linux Password.](../../Getting_Started/Accessing_eRI/Setting_Up_and_Resetting_Your_Password.md)
-     -   Set up Second [Factor Authentication.](../../Getting_Started/Accessing_eRI/Setting_Up_Two_Factor_Authentication.md)
+     -   Have an [active account and project.](../../Getting_Started/Accessing_eRI/Creating_an_eRI_Account.md)
      -   Using standard Linux/Mac terminal *or* [Windows Subsystem for Linux](../../Scientific_Computing/Terminal_Setup/Windows_Subsystem_for_Linux_WSL.md)
          with [Ubuntu terminal](../../Scientific_Computing/Terminal_Setup/Ubuntu_LTS_terminal_Windows.md).
 
@@ -29,36 +23,15 @@ configurations.
     following (replacing **`username`** with your username):
 
     ```sh
-    Host mahuika
-       User username
-       Hostname login.mahuika.nesi.org.nz
-       ProxyCommand ssh -W %h:%p lander
-       ForwardX11 yes
-       ForwardX11Trusted yes
-       ServerAliveInterval 300
-       ServerAliveCountMax 2
+    Host login-0 login-0.eri.agresearch.co.nz
+        HostName login-0.eri.agresearch.co.nz
+        User <USERID>@agresearch.co.nz     # eg blogsj@agresearch.co.nz
+        GSSAPIAuthentication yes
 
-    Host maui
-       User username
-       Hostname login.maui.nesi.org.nz
-       ProxyCommand ssh -W %h:%p lander
-       ForwardX11 yes
-       ForwardX11Trusted yes
-       ServerAliveInterval 300
-       ServerAliveCountMax 2
-
-    Host lander
-       User username
-       HostName lander.nesi.org.nz
-       ForwardX11 yes
-       ForwardX11Trusted yes
-       ServerAliveInterval 300
-       ServerAliveCountMax 2
-
-    Host *
-        ControlMaster auto
-        ControlPath ~/.ssh/sockets/ssh_mux_%h_%p_%r
-        ControlPersist 1
+    Host login-1 login-1.eri.agresearch.co.nz
+        HostName login-1.eri.agresearch.co.nz
+        User <USERID>@agresearch.co.nz     # eg blogsj@agresearch.co.nz
+        GSSAPIAuthentication yes
     ```
 
     Close and save with ctrl x, y, Enter
@@ -72,20 +45,20 @@ Assuming you have followed the setup above you will be able to connect
 to the clusters directly using;
 
 ```sh
-ssh mahuika
+ssh login-0
 ```
 
 or
 
 ```sh
-ssh maui
+ssh login-1
 ```
 
 Subsequent local terminals opened will be able to `scp` files without
 having to re-enter authentication e.g.
 
 ```sh
-scp <path/filename> mahuika:~/
+scp <path/filename> login-0:~/
 ```
 
 For more info visit [data transfer](../../Getting_Started/Next_Steps/Moving_files_to_and_from_the_cluster.md).

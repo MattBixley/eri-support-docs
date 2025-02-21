@@ -1,8 +1,6 @@
 nav:
- - Finding_Software.md
  - Build_an_Apptainer_container_on_a_Milan_compute_node.md
  - Software_Version_Management.md
- - Finding_Software.md
  - Installing_Third_Party_applications.md
  - Compiling_software_on_Mahuika.md
  - ...

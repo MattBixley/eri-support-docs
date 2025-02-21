@@ -5,19 +5,17 @@ tags:
 - project
 - request_membership
 - mynesi
-description: How to add a new member to your NeSI project.
+description: How to add a user to your eRI project.
 ---
 
 !!! prerequisite
-    - Have a [NeSI Account profile](./Creating_a_NeSI_Account_Profile.md).
-    - Be the **owner** of a [NeSI project](./Applying_for_a_new_NeSI_project.md).
+    - Have an [eRI Account profile](./Creating_a_NeSI_Account_Profile.md).
+    - Be the **owner** of an [eRI project](./Applying_for_a_new_eRI_project.md).
 
-1. Log in to [my.nesi.org.nz](https://my.nesi.org.nz/) via your browser.
-2. Under **List Projects**, click on the project you want to add members to.
-3. When the page is loaded, scroll down to the section **Project Members** and select the **+** button (you will need to be the owner of the project).
-4. Enter the Username of the new member, select a project role from the drop-down options, and click **Submit**.
+1. Log in to [Coldfront](https://coldfront.eri.agresearch.co.nz/) via your browser.
 
-   ![Adding_Members.png](../../assets/images/Adding_Members.png)
+Currently - Please refer to the [Coldfront documentation](https://nznesi.atlassian.net/wiki/spaces/eRI/pages/2983526586/How+to+connect+to+ColdFront) for the most up-to-date information. On how to Self Manage your projects, access and allocations
+  
 
 !!! prerequisite "What Next?"
-    - The new team member will now be able to access your project on NeSI, provided they have [set a NeSI account password](../Accessing_eRI/Setting_Up_and_Resetting_Your_Password.md).
+    - The new team member will now be able to access your project.

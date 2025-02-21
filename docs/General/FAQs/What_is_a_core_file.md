@@ -17,9 +17,7 @@ for memory it can't legally access. The creation of a core file is
 called a 'core dump'.
 
 .core files are a record of the working memory at time of failure, and
-can be used for
-[debugging](../../Scientific_Computing/Profiling_and_Debugging/Debugging.md).
-MPI jobs will usually create a .core file for each task.
+can be used for debuggin. MPI jobs will usually create a .core file for each task.
 
 As .core files are usually very large, you should delete the ones you
-don't plan on using them to avoid filling up your storage quota.
+don't plan on using to avoid them filling up your storage quota.

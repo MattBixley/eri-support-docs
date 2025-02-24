@@ -19,3 +19,6 @@ Currently - Please refer to the [Coldfront documentation](https://nznesi.atlassi
 
 !!! prerequisite "What Next?"
     - The new team member will now be able to access your project.
+
+
+

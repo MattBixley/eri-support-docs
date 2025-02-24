@@ -1,5 +1,5 @@
 ---
-created_at: '2023-10-13T00:14:22Z'
+created_at: '2025-02-24T00:14:22Z'
 tags: []
 title: Globus Quick Start Guide
 vote_count: 0
@@ -13,9 +13,9 @@ information, please see our other Globus articles here: [Globus documentation](D
 
 Globus is a third-party service for transferring large amounts of data
 between two Globus Data Transfer Nodes (DTNs). To use Globus to transfer
-data to or from NeSI, you need:
+data to or from eRI, you need:
 
-1. A NeSI account
+1. An eRI account
 2. A Globus account
 3. Access to Globus DTNs or endpoint  
     - Access to a DTN (e.g., at your home institution)
@@ -23,11 +23,11 @@ data to or from NeSI, you need:
 
 ## Globus Account
 
-Please note that a Globus account is not the same as a NeSI account. You
-will need both Globus and NeSI accounts in order to transfer data to or
-from NeSI HPC facilities.
+Please note that a Globus account is not the same as an eRI account. You
+will need both Globus and eRI accounts in order to transfer data to or
+from eRI HPC facilities.
 
-To get a Globus account, go to <https://transfer.nesi.org.nz/> and sign
+To get a Globus account, go to <https://www.globus.org/> and sign
 up using one of the available options on the page. Please note that the
 "existing organizational login" is somewhat limited, if your
 organisation is not listed, please sign in (sign up) using any of the
@@ -41,18 +41,19 @@ Identities](../../Storage/Data_Transfer_Services/Initial_Globus_Sign_Up-and_your
 
 ## Globus Endpoint Activation
 
-A NeSI account is required in addition to a Globus account to transfer
-data to or from NeSI facilities. *  
-*
+An eRI account is required in addition to a Globus account to transfer
+data to or from eRI facilities.
 
 To transfer data, between two sites, you need to have access to a DTN or
-endpoint at each location. For example, one on NeSI (NeSI Wellington DTN
-V5), the other to University of Otago's central file storage. You will
-also need the appropriate read and write permissions from where you're
-copying to and from. Please note that the NeSI `project` directory is
-read only, and `nobackup` is read and write.
+endpoint at each location. For example, one on eRI, the other to NeSI (NeSI Wellington DTN V5). You will also need the appropriate read and write permissions from where you're copying to and from.
 
-A list of some Institutional endpoints can be found here:
+There are currently two AgResearch eRI endpoints.
+- Agresearch Datasets
+- Agresearch Projects
+
+![eRI_endpoints.png](../../assets/images/eRI_globus_endpoints.png)
+
+A list of some other Institutional endpoints can be found here:
 [National-Data-Transfer-Platform](../../Storage/Data_Transfer_Services/National_Data_Transfer_Platform.md).
 You can also set up your own [personal
 endpoint](../../Storage/Data_Transfer_Services/Personal_Globus_Endpoint_Configuration.md)
@@ -60,29 +61,23 @@ to transfer data to or from your personal computer, however,
 administrative access to your computer is required
 
 To activate the NeSI endpoint click go to
-[https://transfer.nesi.org.nz/](https://transfer.nesi.org.nz/)  and click "file manager" on the menu
+[https://app.globus.org/file-manager](https://app.globus.org/file-manager/)  and click "file manager" on the menu
 bar on the left.
 
-1. Next to "Collection", search for "NeSI Wellington DTN V5", select
-    it, then click "Continue".
-2. In the 'Username**'** field, enter your NeSI HPC username. In the
-    'Password**'** field, the password is
-    `Login Password (First Factor)` +
-    `Authenticator Code (Second Factor)` e.g. `password123456`. Please
-    **do not** save your password on "*Browser settings*" as it will
-    change every time due to the 2nd factor requirement.
+1. Next to "Collection", search for "Agresearch", select the endpoint of interest, then click "Continue".
+2. If this is your first time logging in, or the login has timed out , you will need to authenticate to the endpoint.
 
-![NeSI_Globus_Authenticate.png](../../assets/images/Globus_Quick_Start_Guide_0.png)
+![Authenticate_to_endpoint](../../assets/images/eRI_AgR_Datasets_consents.png)
 
 ## Transferring Data
 
 To transfer data, activate your two endpoints and navigate to the
 appropriate folders, then select the files or folders of interest. To
 initiate the transfer, select one of the two directional arrows. In the
-image below, the 'config' folder is being transferred from the location
-on the right, to the location on the left.
+image below, the 'raw_data' folder is being transferred from the location
+on the right (NeSI), to the location on the left (eRI).
 
-![Globus_transfer_data.png](../../assets/images/Globus_Quick_Start_Guide_1.png)
+![alt text](../../assets/images/eRI_Globus_transfer.png)
 
 To see the progress of the transfer, please click 'Activity' on the left
 hand menu bar.

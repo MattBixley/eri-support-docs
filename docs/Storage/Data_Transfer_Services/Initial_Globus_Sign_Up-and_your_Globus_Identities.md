@@ -12,7 +12,7 @@ Globus provides logins for NeSI users via their organisation, GitHub,
 Google or GlobusID.
 
 1. Sign-Up to Globus
-    [Globus Login](https://transfer.nesi.org.nz/), look for your organisation in the
+    [Globus Login](https://app.globus.org/), look for your organisation in the
     drop-down box. If your organisation is not present in the drop-down box,
     you can also use any of the available methods - this then becomes your
     primary identity in Globus.

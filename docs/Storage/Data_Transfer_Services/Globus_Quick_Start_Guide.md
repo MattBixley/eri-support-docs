@@ -1,6 +1,6 @@
 ---
 created_at: '2025-02-24T00:14:22Z'
-tags: []
+tags: [Globus, data, transfer]
 title: Globus Quick Start Guide
 vote_count: 0
 vote_sum: 0
@@ -8,8 +8,7 @@ zendesk_article_id: 8117557125391
 zendesk_section_id: 360000040596
 ---
 
-This is intended to be a quick-start guide, for more detailed
-information, please see our other Globus articles here: [Globus documentation](Data_Transfer_using_Globus_V5.md)
+This is intended to be a quick-start guide for using Globus on eRI, for more detailed information, please see our NeSI Globus articles here: [NeSI Globus documentation](https://docs.nesi.org.nz/Storage/Data_Transfer_Services/Data_Transfer_using_Globus_V5/){:target="\_blank"}
 
 Globus is a third-party service for transferring large amounts of data
 between two Globus Data Transfer Nodes (DTNs). To use Globus to transfer
@@ -27,7 +26,7 @@ Please note that a Globus account is not the same as an eRI account. You
 will need both Globus and eRI accounts in order to transfer data to or
 from eRI HPC facilities.
 
-To get a Globus account, go to <https://www.globus.org/> and sign
+To get a Globus account, go to <https://app.globus.org/> and sign
 up using one of the available options on the page. Please note that the
 "existing organizational login" is somewhat limited, if your
 organisation is not listed, please sign in (sign up) using any of the
@@ -47,7 +46,8 @@ data to or from eRI facilities.
 To transfer data, between two sites, you need to have access to a DTN or
 endpoint at each location. For example, one on eRI, the other to NeSI (NeSI Wellington DTN V5). You will also need the appropriate read and write permissions from where you're copying to and from.
 
-There are currently two AgResearch eRI endpoints.
+There are currently two AgResearch eRI endpoints:
+
 - Agresearch Datasets
 - Agresearch Projects
 

@@ -27,7 +27,7 @@ any person who has a Globus account.
     <td><a href="https://app.globus.org/file-manager?origin_id=3064bb28-e940-11e8-8caa-0a1d4c5c824a">NeSI Wellington DTN V5</a></td>
     <td >NeSI Globus Endpoint Version 5, located at NIWA Wellington (Greta Point)</td>
     <td>Transferring files to/from Māui/mahuika, and file-sharing.</td>
-    <td>[Conditions](Data_Transfer_using_Globus_V5.md)</td>
+    <td><a href="https://docs.nesi.org.nz/Storage/Data_Transfer_Services/Data_Transfer_using_Globus_V5/">Data Transfer using Globus</a></td>
     <td>{% include "partials/support_request.html" %}</a></td>
 </tr>
 <tr>
@@ -50,13 +50,6 @@ any person who has a Globus account.
     <td>Transferring files between UoA research drives and Māui/mahuika</td>
     <td><a href="mailto:researchdata@auckland.ac.nz">Apply by email</a></td>
     <td><a href="mailto:researchdata@auckland.ac.nz">researchdata@auckland.ac.nz</a></td>
-</tr>
-<tr>
-    <td><a href="https://app.globus.org/file-manager?origin_id=455b2930-a0df-11e8-96e4-0a6d4e044368">AgResearch DTN01</a></td>
-    <td>A Globus endpoint attached to AgResearch’s institutional Linux storage platform</td>
-    <td>Sharing large datasets with external collaborators and moving large datasets between NeSI’s facility and AgResearch’s internal storage platform</td>
-    <td><a href="mailto:servicedesk@agresearch.co.nz">Apply by email</a></td>
-    <td><a href="mailto:servicedesk@agresearch.co.nz">servicedesk@agresearch.co.nz</a></td>
 </tr>
 <tr>
     <td><a href="https://app.globus.org/file-manager/collections/8861482e-b5a1-4ac8-ac52-2a5a5db5455d/overview?back=endpoints">PFR Globus Connect Server</a></td>
@@ -85,13 +78,6 @@ any person who has a Globus account.
     <td>Generally for internal users, but also for sharing large datasets with collaborators</td>
     <td>Contact the ESR person you are wanting to share data with.</td>
     <td></td>
-</tr>
-<tr>
-    <td><a href="https://app.globus.org/file-manager?origin_id=3064bb28-e940-11e8-8caa-0a1d4c5c824a">NeSI Wellington DTN</a></td>
-    <td>Old NeSI Globus Endpoint, being decommissioned 2021-12-08</td>
-    <td>Transferring files to/from Māui/mahuika, and file-sharing.</td>
-    <td>[Conditions](./Data_Transfer_using_Globus_V5.md)</td>
-    <td><a href="mailto:support@nesi.org.nz">support@nesi.org.nz</a></td>
 </tr>
 </tbody>
 </table>

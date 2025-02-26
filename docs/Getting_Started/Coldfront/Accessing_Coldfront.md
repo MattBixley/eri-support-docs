@@ -31,9 +31,9 @@ Utilise the Azure application proxy and authenticate using your AgResearch accou
 When connecting from the outside, the authentication dialog has to be completed twice. Once for the proxy connection and then again for logging in to the ColdFront application.
 
 !!! info
-    **Related Articles:**  
+    **Related Articles:**
     - [How do I request resources?](How_do_I_request_resources.md)
 
-    - [How do I check my allocations?]()
+    - [How do I check my allocations?](How_do_I_check_my_allocations.md)
     
-    - [How do I add a user?]()
+    - [How do I add a user?](How_do_I_add_a_user.md)

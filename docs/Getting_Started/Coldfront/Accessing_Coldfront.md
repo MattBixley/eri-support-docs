@@ -33,5 +33,7 @@ When connecting from the outside, the authentication dialog has to be completed 
 !!! info
     **Related Articles:**  
     - [How do I request resources?](How_do_I_request_resources.md)
+
     - [How do I check my allocations?]()
+    
     - [How do I add a user?]()

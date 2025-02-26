@@ -1,6 +1,6 @@
-# How do you request a new project or dataset or compute resource?
+# How do I Request a Resource?
 
-This article will guide you on how to request storage allocations on eRI.
+This article will guide you on how to request a new project, dataset or compute resource allocation on eRI.
 
 A project entity in ColdFront is not the same as a storage project or storage dataset.
 

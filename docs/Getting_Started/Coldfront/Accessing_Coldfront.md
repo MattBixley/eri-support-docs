@@ -29,3 +29,9 @@ Project owners can change to role of members or add and remove project and alloc
 Utilise the Azure application proxy and authenticate using your AgResearch account in order to be able to load the ColdFront application web interface.
 
 When connecting from the outside, the authentication dialog has to be completed twice. Once for the proxy connection and then again for logging in to the ColdFront application.
+
+!!! info
+    **Related Articles:**  
+    - [How do I request resources?](How_do_I_request_resources.md)
+    - [How do I check my allocations?]()
+    - [How do I add a user?]()

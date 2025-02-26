@@ -14,7 +14,11 @@ Project owners can change to role of members or add and remove project and alloc
 2. Accept the certificate and authenticate using Microsoft Entra ID.
 3. After the authentication with the proxy, we have to authenticate one more time.
 4. Authenticate using the option “Log in via AgResearch Account”
-![alt text](../../assets/images/image.png)<center>Log in using Microsoft Entra ID</center>
+><center>
+>
+>![alt text](../../assets/images/cf_login.png)
+></center>
+><center>Log in using Microsoft Entra ID</center>
 5. List all your existing projects [https://coldfront.eri.agresearch.co.nz/project/](https://coldfront.eri.agresearch.co.nz/project/) or select “Add a project” to request a new one.
 
 !!! info

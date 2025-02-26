@@ -38,7 +38,8 @@ using the top navigation “Project/Projects”
 
 6. Finally **Submit** the request
 
-!!!Only current project members can be selected. Project members and allocation members can be adjusted at a later stage.
+!!!**Note:**
+    Only current project members can be selected. Project members and allocation members can be adjusted at a later stage.
 
 ### Awaiting request approval
 

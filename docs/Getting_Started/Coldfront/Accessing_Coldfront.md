@@ -1,4 +1,4 @@
-# How to connect to ColdFront
+# Access to ColdFront
 
 **ColdFront** is a resource and allocation management system designed to provide a central portal for administration, reporting, and measuring scientific impact of cyberinfrastructure resources.
 
@@ -10,17 +10,13 @@ Project owners can change to role of members or add and remove project and alloc
 
 ### Connecting from within the AgResearch network:
 
-1) Open your web browser and navigate to [https://coldfront.eri.agresearch.co.nz/user/login](https://coldfront.eri.agresearch.co.nz/user/login)
-
-2) Accept the certificate and authenticate using Microsoft Entra ID. 
-
-3) After the authentication with the proxy, we have to authenticate one more time.
-
-4) Authenticate using the option “Log in via AgResearch Account”
-![alt text](../../assets/images/image.png)
-<center>Log in using Microsoft Entra ID</center>
-
-5) List all your existing projects [https://coldfront.eri.agresearch.co.nz/project/](https://coldfront.eri.agresearch.co.nz/project/) or select “Add a project” to request a new one.
+>1) Open your web browser and navigate to [https://coldfront.eri.agresearch.co.nz/user/login](https://coldfront.eri.agresearch.co.nz/user/login)
+>2) Accept the certificate and authenticate using Microsoft Entra ID.
+>3) After the authentication with the proxy, we have to authenticate one more time.
+>4) Authenticate using the option “Log in via AgResearch Account”
+>![alt text](../../assets/images/image.png)
+><center>Log in using Microsoft Entra ID</center>
+>5) List all your existing projects [https://coldfront.eri.agresearch.co.nz/project/](https://coldfront.eri.agresearch.co.nz/project/) or select “Add a project” to request a new one.
 
 !!! info
     **Note:** only enabled users can log in at this stage! Your username and email address must be available to ColdFront to map to your login session.

@@ -21,7 +21,8 @@ Project owners can change to role of members or add and remove project and alloc
 ><center>Log in using Microsoft Entra ID</center>
 5. List all your existing projects [https://coldfront.eri.agresearch.co.nz/project/](https://coldfront.eri.agresearch.co.nz/project/) or select “Add a project” to request a new one.
 
-!!! **Note:** 
+!!!**Note:** 
+
     only enabled users can log in at this stage! Your username and email address must be available to ColdFront to map to your login session.
 
 ### Connecting from outside the AgResearch network:
@@ -30,7 +31,8 @@ Utilise the Azure application proxy and authenticate using your AgResearch accou
 
 When connecting from the outside, the authentication dialog has to be completed twice. Once for the proxy connection and then again for logging in to the ColdFront application.
 
-!!! **Related Articles:**
+!!!**Related Articles:**
+
     - [How do I request resources?](How_do_I_request_resources.md)
 
     - [How do I check my allocations?](How_do_I_check_my_allocations.md)

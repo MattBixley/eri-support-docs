@@ -4,7 +4,7 @@ This article will guide you on how to request a new project, dataset or compute 
 
 A project entity in ColdFront is not the same as a storage project or storage dataset.
 
-See How to connect to ColdFront to connect and log in to ColdFront. Users have to be assigned a suitable role:ColdFront roles - PI or Project Owner and eResearch Infrastructure Implementation Frequently Asked Questions for a definition of Project and Dataset.
+See [Accessing Coldfront](Accessing_Coldfront.md) to connect and log in to ColdFront. Users have to be assigned a suitable role: ColdFront roles - PI or Project Owner.
 
 ## Instructions
 
@@ -38,8 +38,8 @@ using the top navigation “Project/Projects”
 
 6. Finally **Submit** the request
 
-!!!**Note:**
-    Only current project members can be selected. Project members and allocation members can be adjusted at a later stage.
+!!! Note
+    - Only current project members can be selected. Project members and allocation members can be adjusted at a later stage.
 
 ### Awaiting request approval
 

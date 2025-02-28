@@ -6,36 +6,30 @@ vote_count: 9
 vote_sum: 7
 ---
 
-## Snapshots
+Data on the filesystem is backed up via the Data Management Framework (DMF) or weekly snapshots. If you need to recover data in `/home`, `projects` or `datasets`, please {% include "partials/support_request.html" %}. Backups for files in `scratch` may be found in one of weekly snapshots.
 
-### Update for eRI Pathways
+## Scratch Snapshots
+Snapshots are read only copies of the file system. Weekly snapshots of the scratch directory are taken each week on Friday morning. Please note that a maximum of 4 weeks worth of snapshots will be retained at any one time.
 
-Snapshots are read only copies of the file system taken every day at
-12:15, and retained for seven days.  
-  
-Files from you project directory can be found
-in `/nesi/project/.snapshots/` followed by the weekday (capitalised) and
-project code, e.g;
+The snapshots can be found in the `mnt/gpfs/scratch/.snapshots` directory and are named "scratch@\<timestamp\>", where the timestamp is the date and time in GMT.
+```
+login-0:/mnt/gpfs/scratch/.snapshots$ ls
+scratch@GMT-2025.01.31-09.00.02  scratch@GMT-2025.02.14-09.00.03
+scratch@GMT-2025.02.07-09.00.03  scratch@GMT-2025.02.21-09.00.04
+```
+The most recent snapshot here is `/mnt/gpfs/scratch/.snapshots/scratch@GMT-2025.02.21-09.00.04/projects`
 
-``` sl
-/nesi/project/.snapshots/Sunday/nesi99999/
+To recover a file or directory, you can either copy or rsync it back
+```
+# copy file to project directory
+cp /mnt/gpfs/scratch/.snapshots/scratch@GMT-2025.02.21-09.00.04/projects/<project_id>/file.txt /agr/persist/projects/<project_id>/
+
+# rsync directory to project directory
+rsync -avi --stats /mnt/gpfs/scratch/.snapshots/scratch@GMT-2025.02.21-09.00.04/projects/<project_id>/my_directory /agr/persist/projects/<project_id>/
+
 ```
 
- And for home directory;
 
-``` sl
-/home/username/.snapshots/Sunday/
-```
-
-!!! Warning
-     Files in `/nesi/nobackup/` are not snapshotted.
-
-Recovering a file or a directory from the snapshot is as simple as
-copying it over, e.g.
-
-``` sl
-cp /nesi/project/.snapshots/Sunday/nesi99999/file.txt /nesi/project/nesi99999/file.txt
-```
 
 !!! Tip
      For copying directories use the flag -ir or just -r if you don't want to be prompted before overwriting

@@ -56,7 +56,7 @@ There are currently two AgResearch eRI endpoints:
 A list of some other Institutional endpoints can be found here:
 [National-Data-Transfer-Platform](../../Storage/Data_Transfer_Services/National_Data_Transfer_Platform.md).
 You can also set up your own [personal
-endpoint](../../Storage/Data_Transfer_Services/Personal_Globus_Endpoint_Configuration.md)
+endpoint](https://docs.nesi.org.nz/Storage/Data_Transfer_Services/Personal_Globus_Endpoint_Configuration/)
 to transfer data to or from your personal computer, however,
 administrative access to your computer is required
 

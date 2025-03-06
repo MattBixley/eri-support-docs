@@ -3,17 +3,9 @@ created_at: '2018-11-30T00:34:14Z'
 tags:
 - ssh
 - howto
-description: How to setup your ssh config file in order to connect to the NeSI cluster.
+description: How to setup your ssh config file in order to connect to the eRI cluster.
 ---
 
-!!! prerequisite
-     -   Have an [active account and project.](../../Getting_Started/Accounts-Projects_and_Allocations/Creating_a_NeSI_Account_Profile.md)
-     -   Set up your [Linux Password.](../../Getting_Started/Accessing_the_HPCs/Setting_Up_and_Resetting_Your_Password.md)
-     -   Set up [Second Factor Authentication.](../../Getting_Started/Accessing_the_HPCs/Setting_Up_Two_Factor_Authentication.md)
-     -   Have one of:
-         - Built in Linux/Mac terminal
-         - [Windows Subsystem for Linux](../../Scientific_Computing/Terminal_Setup/Windows_Subsystem_for_Linux_WSL.md)
-         - [VSCode](../../Scientific_Computing/Terminal_Setup/VSCode.md)
 
 ## First time setup
 
@@ -30,7 +22,7 @@ configurations.
 ```sh
 Host ssh.agresearch.co.nz
     HostName ssh.agresearch.co.nz
-    User bixleym
+    User <userid>
     IdentitiesOnly yes
     IdentityFile ~/.ssh/agr.rsa
     ForwardX11 yes
@@ -40,8 +32,8 @@ Host ssh.agresearch.co.nz
 
 Host inscrutable.agresearch.co.nz
     HostName inscrutable.agresearch.co.nz
-    ProxyJump bixleym@ssh.agresearch.co.nz
-    User bixleym
+    ProxyJump <userid>@ssh.agresearch.co.nz
+    User <userid>
     IdentitiesOnly yes
     IdentityFile ~/.ssh/agr.rsa
     ForwardX11 yes

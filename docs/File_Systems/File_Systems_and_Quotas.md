@@ -74,19 +74,13 @@ and cached between updates.
 
 ### /home
 
-	@@ -103,7 +84,7 @@
 your My NeSI account is active and you are a member of at least one
 active project.
 
 ### /project
 
 This filesystem is accessible from all login, compute and ancillary
-nodes. Contents are backed up daily, via the Spectrum Protect backup
-	@@ -120,12 +101,12 @@
-Each NeSI project receives quota allocations for
-`/nesi/project/<project_code>`, based on the requirements you tell us
-about in your [application for a new NeSI
-project](https://my.nesi.org.nz/html/request_project), and separately covering disk space and number of files.
+nodes. Contents are backed up daily.
 
 ### /scratch
 
@@ -94,17 +88,6 @@ The `/scratch` file system has the highest performance of all NeSI
 file systems, with greater than 140 GB/s bandwidth from compute nodes to
 disk. It provides access to a large (4.4 PB) resource for
 short-term project usage.
-	@@ -137,7 +118,7 @@
-above table; if you require more temporary (scratch) space for your
-project than the default quota allows for, you can discuss your
-requirements with us during [the project application process](../../General/NeSI_Policies/How_we_review_applications.md),
-or {% include "partials/support_request.html" %} at any time.
-
-To ensure this file system remains fit-for-purpose, we have a regular
-cleaning policy as described in
-	@@ -150,85 +131,10 @@
-The purpose of this policy is to ensure that any user will be able to
-analyse datasets up to 1 PB in size.
 
 ## Snapshots
 
@@ -113,4 +96,3 @@ a [snapshot](../Data_Recovery/File_Recovery.md).
 Snapshots are taken daily of `home/` and `project` directories If you
 cannot find it in a snapshot, please ask us to recover it for you by
 {% include "partials/support_request.html" %}
-

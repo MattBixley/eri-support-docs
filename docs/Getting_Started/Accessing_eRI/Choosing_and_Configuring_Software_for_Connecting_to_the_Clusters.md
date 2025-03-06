@@ -34,12 +34,12 @@ installed, usually called, "Terminal." To find it, simply search for
 Congratulations! You are ready to move to the next step.
 
 !!! prerequisite "What next?"
-    Setting up your [Default Terminal](../../Scientific_Computing/Terminal_Setup/Standard_Terminal_Setup.md)
+    Setting up your [Default Terminal](Terminal_Setup.md)
 
 ### VSCode
 
 The inbuilt 'remotes' plugin allows connecting to remote hosts.
-If you have set up your `~/.ssh/config` as described in [Standard_Terminal_Setup](../../Scientific_Computing/Terminal_Setup/Standard_Terminal_Setup.md),
+If you have set up your `~/.ssh/config` as described in [Terminal_Setup](Terminal_Setup.md),
 VSCode will detect this and show configured hosts in the 'Remote Explorer' Tab.
 
 ## Windows
@@ -131,15 +131,3 @@ Git Bash is perfectly adequate for testing your login or setting up
 your password, but lacks many of the features of MobaXterm or a
 native Unix-Like terminal. Therefore we do not recommend it as your
 primary terminal.
-
-### Windows PowerShell
-
-All Windows computers have PowerShell installed, however it will
-only be useful to you if Windows Subsystem for Linux (WSL) is also
-enabled, instructions can be found at
-[Windows_Subsystem_for_Linux_WSL](../../Scientific_Computing/Terminal_Setup/Windows_Subsystem_for_Linux_WSL.md).
-
-Like Git Bash, PowerShell is perfectly adequate for testing your
-login or setting up your password, but lacks many of the features of
-MobaXterm or a native Unix-Like terminal. Therefore we do not
-recommend it as your primary terminal.

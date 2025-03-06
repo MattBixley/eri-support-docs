@@ -1,7 +1,6 @@
 ---
 nav:
   - Creating_an_eRI_Account.md
-  - Applying_for_a_new_eRI_project.md
   - Adding_Members_to_an_eRI_project.md
   - Choosing_and_Configuring_Software_for_Connecting_to_the_Clusters.md
   - Port_Forwarding.md

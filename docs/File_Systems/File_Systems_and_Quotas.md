@@ -92,7 +92,7 @@ short-term project usage.
 ## Snapshots
 
 If you have accidentally deleted data you can recover it from
-a [snapshot](../Data_Recovery/File_Recovery.md).
-Snapshots are taken daily of `home/` and `project` directories If you
+a [snapshot](File_Recovery.md).
+Snapshots are taken daily of `home/` and `project/` directories If you
 cannot find it in a snapshot, please ask us to recover it for you by
 {% include "partials/support_request.html" %}

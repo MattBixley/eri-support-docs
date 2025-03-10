@@ -23,16 +23,7 @@ Files are deleted if they meet **all** of the following criteria:
     for at least 120 days.
 - The file was identified as a candidate for deletion two weeks
     previously, and as such is listed in a the project's
-    scratch `.policy` directory.
-
-!!! tip
-     You can get a list of files marked for deletion with the command
-     `nn_doomed_list`.
-
-    Maximum length of the output file (lines)
-    If no arguments are given, `nn_doomed_list` checks and displays all
-    project directories the user is a member of. 
-    Default limit of the output file is 40 lines. 
+    scratch `scratch_<project_id>_autocleaner` directory.
 
 The general process will follow a schedule as follows:
 
@@ -52,7 +43,7 @@ The general process will follow a schedule as follows:
      particular email message will be successfully delivered and
      received, for instance our emails could be blocked by your mail
      server or your inbox could be too full. We suggest that you check
-     `/scratch/<project_code>/.policy` (see below) for a list of
+     `/scratch/<project_id>/scratch_<project_id>_autocleaner/` (see below) for a list of
      deletion candidates, for each of your projects, whether you
      received an email from us or not.
 
@@ -64,14 +55,10 @@ The general process will follow a schedule as follows:
 
 A file containing the list of candidates for deletion during the next
 cleanup, along with the date of the next cleanup, will be created in a
-directory called `.policy/to_delete` inside the project's nobackup
+directory called `scratch_<project_id>_autocleaner` inside the project's scratch
 directory. For example, the candidates for future deletion  from the
 directory `/scratch/2024_agr12345` are recorded in
-`/scratch/2024_agr12345/.policy/to_delete/<date>.filelist.gz`. Project
-team members are able to view the contents of `.policy` (but not delete
-or modify those contents). The `gzip` compressed file-list can be viewed
-and searched with the `zless` and `zgrep` commands respectively, e.g.,
-`zless /scratch/2024_agr12345/.policy/to_delete/<date>.filelist.gz`.
+`/scratch/2024_agr12345/scratch_2024_agr12345_autocleaner/flagged_files_log_<date>`. Project team members are able to view the contents of `scratch_2024_agr12345_autocleaner` (but not delete or modify those contents).
 
 !!! warning
      Objects other than files, such as directories and symbolic links, are
@@ -83,14 +70,14 @@ and searched with the `zless` and `zgrep` commands respectively, e.g.,
 ## What should I do with expiring data on the scratch filesystem?
 
 If the data is transient and no longer required for continued processing
-on NeSI then we would appreciate if you deleted it yourself, but you can
+on eRI, we would appreciate if you deleted it yourself, but you can
 also let the automated process do this.
 
 If you have files identified as candidates for deletion that you need to
 keep beyond the scheduled expiry date, you have four options:
 
 - Move the file to your persistent project directory,
-    e.g., `/scratch/2024_agr12345`. You may need to request more disk
+    e.g., `/project/2024_agr12345`. You may need to request more disk
     space, more inodes, or both, in your persistent project directory
     before you can do this. {% include "partials/support_request.html" %}. We
     assess such requests on a case-by-case basis.  Note:  You can save
@@ -110,7 +97,7 @@ keep beyond the scheduled expiry date, you have four options:
 
 | How often will my team's HPC jobs be accessing the data? | How often will my team's HPC jobs be modifying the data? | Recommended option                                                                                         |
 | -------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Often                                                    | Often (at least once every two months)                   | Leave in the nobackup directory (but ensure key result data is copied to the persistent project directory) |
+| Often                                                    | Often (at least once every two months)                   | Leave in the scratch directory (but ensure key result data is copied to the persistent project directory) |
 | Often                                                    | Seldom                                                   | Put in the persistent project directory                                                                    |
 | Seldom                                                   | Seldom                                                   | Store the data elsewhere (e.g. at your institution)                                                        |
 
@@ -123,7 +110,18 @@ used to build and edit code, provided that the code is under version
 control and changes are regularly checked into upstream revision control
 systems.
 
-## If I need a file that was deleted from nobackup, what should I do?
+## If I need a file that was deleted from scratch, what should I do?
+
+Depending on when the file was deleted, it may be possible to recover the file. A record when files were deleted by the autocleaner can be found in `/scratch/<project_id>/scratch_<project_id>_autocleaner/`. This directory contains a number of files:
+
+  - `deleted_files_log.latest` - lists all of the files that were most recently deleted
+  - `deleted_files_summary.latest` - summary of all of the files that were most recently deleted
+  - `flagged_files_log.latest` - files marked for deletion in the next cycle
+  - `deleted_files_summary_<date>` - summary of deleted files on the specified date
+  - `deleted_files_log_<date>` - files that were deleted on the specified date
+  - `flagged_files_log_<date>` - files that were marked for deletion on the specified date
+
+
 
 Please {% include "partials/support_request.html" %} as soon as
 possible after you find that the file is missing.
@@ -131,8 +129,11 @@ To reduce the risk of this outcome again in future,
 please {% include "partials/support_request.html" %} so that we
 can discuss your data storage options with you.
 
-## I have research data on nobackup that I can't store in my project directory or at my institution right now. What should I do?
+## I have research data on scratch that I can't store in my project directory or at my institution right now. What should I do?
 
-Please {% include "partials/support_request.html" %} without delay
-so we can discuss your short- and medium-term data storage needs. 
+Projects are intended for active/ongoing work whereas Datasets are to enable collaboration on, sharing of, and reference to research data. A single research activity/project might require both a Project and one or more Datasets on the eResearch Infrastructure. At the end of a research activity, a final step might involve turning the Project into a Dataset for archive.
+
+A Dataset will include a dataset directory only, no scratch storage, no computing/analysis resources. Datasets have an owner/custodian and a team of contributors, where each member of the team will have full access to the contents of the dataset’s storage. Datasets also have read-only access, either to a defined group of individuals or for all AgResearch users.
+
+Please {% include "partials/support_request.html" %} if you need a Dataset to store your research data. 
 

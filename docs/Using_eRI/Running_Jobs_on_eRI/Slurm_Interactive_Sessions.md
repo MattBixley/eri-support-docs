@@ -31,7 +31,7 @@ nodes.**
 For example;
 
 ```sh
-srun --account nesi12345 --job-name "InteractiveJob" --cpus-per-task 8 --mem-per-cpu 1500 --time 24:00:00 --pty bash
+srun --account <2025-project> --job-name "InteractiveJob" --cpus-per-task 8 --mem-per-cpu 1500 --time 24:00:00 --pty bash
 ```
 
  You will receive a message.
@@ -44,11 +44,11 @@ And when the job starts:
 
 ```out
 srun: job 10256812 has been allocated resources
-[wbn079 ~ SUCCESS ]$
+[compute-0 ~ SUCCESS ]$
 ```
 
 Note the host name in the prompt has changed to the compute node
-`wbn079`.
+`compute-0`.
 
 For a full description of `srun` and its options, see the
 [schedmd documentation](https://slurm.schedmd.com/srun.html).
@@ -63,7 +63,7 @@ a GUI on the login node, but your processes on the compute nodes.
 For example:
 
 ```sh
-salloc --account nesi12345 --job-name "InteractiveJob" --cpus-per-task 8 --mem-per-cpu 1500 --time 24:00:00
+salloc ---account <2025-project> --job-name "InteractiveJob" --cpus-per-task 8 --mem-per-cpu 1500 --time 24:00:00
 ```
 
 You will receive a message.
@@ -78,10 +78,10 @@ And when the job starts;
 ```out
 salloc: job 10256925 has been allocated resources
 salloc: Granted job allocation 10256925 
-[mahuika01~ SUCCESS ]$
+[compute-0~ SUCCESS ]$
 ```
 
-Note the that you are still on the login node `mahuika01`, however you
+Note the that you are still on the login node `login-0`, however you
 will now have permission to `ssh` to any node you have a session on .
 
 For a full description of `srun` and its options, see
@@ -146,7 +146,7 @@ disrupted while you're away.
      will permanently cancel that interactive session and remove it from
      the queue, whether it has started or not.
 
-1. Log in to a Mahuika, Māui or Māui-ancil login node.
+1. Log in to eRI login node.
 2. Start up `tmux` or `screen`.
 
 ## Modifying an existing interactive session
@@ -249,7 +249,7 @@ xargs -I {} scontrol update jobid={} StartTime=tomorrowT09:30:00
 
 If you want to do this automatically every working day and you have a
 consistent element that you use in the name of all your interactive
-jobs, you can set up cron jobs on Māui, Mahuika and/or Māui-ancil login
+jobs, you can set up cron jobs on the eRI login
 nodes. This is left as an exercise for the reader, having regard to the
 following:
 

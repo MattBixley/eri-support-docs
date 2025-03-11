@@ -29,17 +29,7 @@ jobs, but is limited to one small job per user at a time: no more than
 
 ### Fair Share
 
-Job priority decreases whenever the project uses more core-hours than
-expected, across all partitions.
-This [Fair Share](../../Scientific_Computing/Running_Jobs_on_Maui_and_Mahuika/Fair_Share.md)
-policy means that projects that have consumed many CPU core hours in the
-recent past compared to their expected rate of use (either by submitting
-and running many jobs, or by submitting and running large jobs) will
-have a lower priority, and projects with little recent activity compared
-to their expected rate of use will see their waiting jobs start sooner.
- Fair Share contributes up to 1000 points to the job priority. To see
-the recent usage and current fair-share score of a project, you can use
-the command `nn_corehour_usage`.
+How does it work on eRI
 
 ### Job Age
 
@@ -51,19 +41,6 @@ point per hour for up to 3 weeks.
 This slightly favours jobs which request a larger count of CPUs (or
 memory or GPUs) as a means of countering their otherwise inherently
 longer wait times.
-
-### Project Allocation Class
-
-This depends on which "allocation class" entitles your project to use
-NeSI.
-
-| Project class        | Class Priority Score |
-| -------------------- | -------------------- |
-| Proposal Development | 10                   |
-| Postgraduate         | 20                   |
-| Collaborator         | 30                   |
-| Merit                | 40                   |
-| Commercial           | 40                   |
 
 ### Nice values
 
@@ -80,13 +57,6 @@ without further intervention.  You can hold jobs with the command
 `scontrol hold <jobid>` and release them with
 `scontrol release <jobid>`.  Jobs can also end up in this state when
 they get requeued after a node failure.
-
-## Other Limits
-
-Cluster and partition-specific limits can sometimes prevent jobs from
-starting regardless of their priority score.  For details see the pages
-on [Mahuika](../../Scientific_Computing/Running_Jobs_on_Maui_and_Mahuika/Mahuika_Slurm_Partitions.md) or
-[Māui.](../../Scientific_Computing/Running_Jobs_on_Maui_and_Mahuika/Maui_Slurm_Partitions.md)
 
 ## Backfill
 

@@ -19,15 +19,15 @@ together with its contents, as the case may be, will keep its original
 ownership, group and permissions.
 
 So, supposing Joe Bloggs moves a file from his home directory to the
-project directory `/nesi/project/nesi99999`, his fellow team members
+project directory `/project/2024_agr12345/bloggsj`, his fellow team members
 won't be able to write to it:
 
 ```sh
 $ ls -l README
 -rw-r--r-- 1 bloggsj bloggsj 235 Mar 14  2014 README
-$ mv README /nesi/project/nesi99999/bloggsj/README
-$ ls -l /nesi/project/nesi99999/bloggsj/README
--rw-r--r-- 1 bloggsj bloggsj 235 Mar 14  2014 /nesi/project/nesi99999/bloggsj/README
+$ mv README /project/2024_agr12345/bloggsj/README
+$ ls -l /project/2024_agr12345/bloggsj/README
+-rw-r--r-- 1 bloggsj bloggsj 235 Mar 14  2014 /project/2024_agr12345/bloggsj/README
 ```
 
 As you can see, the file stays in the group `bloggsj`, that is Joe
@@ -76,10 +76,10 @@ this by means of the following commands.
 
 ```sh
 # Replace nesi12345 with your desired project code
-group=nesi12345
+group=2024_agr12345
 startdir=$(pwd)
-# Replace /nesi/project with /nesi/nobackup if needed
-cd /nesi/project/${group}
+# Replace /project/<project_id> with /scratch/<project_id> if needed
+cd /project/${group}
 # Move all files, directories, etc. owned by yourself into the project group
 # The --no-dereference option updates the group of symbolic links (where permitted)
 find . -user $(whoami) -print0 | xargs -0 -I {} chgrp --no-dereference ${group} {}

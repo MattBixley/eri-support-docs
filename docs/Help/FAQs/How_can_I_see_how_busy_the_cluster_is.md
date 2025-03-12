@@ -11,32 +11,25 @@ zendesk_section_id: 360000039036
 You can get the current status of all nodes on a cluster using the
 command `sinfo`, you will get a printout like the following.
 
-*The nodelist column has been truncated for readability*
-
 ```sh
-PARTITION AVAIL JOB_SIZE TIMELIMIT    CPUS S:C:T    NODES   STATE    NODELIST
-large*    up    1-infini 3-00:00:00     72 2:18:2       1   down*      wbn128
-large*    up    1-infini 3-00:00:00     72 2:18:2     133   mixed      wbn[009-020...
-large*    up    1-infini 3-00:00:00     72 2:18:2       7   allocated  wbn[031,038
-large*    up    1-infini 3-00:00:00     72 2:18:2      85   idle       wbn[021,037...
-long      up    1-infini 21-00:00:0     72 2:18:2      64   mixed      wbn[009-020...
-long      up    1-infini 21-00:00:0     72 2:18:2       5   allocated  wbn[031,077...
-gpu       up    1-infini 3-00:00:00      8  8:1:1       1   reserved   vgpuwbg004
-gpu       up    1-infini 3-00:00:00      8  8:1:1       3   idle       vgpuwbg[001-003]
-igpu      up    1-infini 3-00:00:00      8  8:1:1       1   reserved   vgpuwbg004
-prepost   up    1-infini    3:00:00     72 2:18:2       2   down*      wbl[003,005]
-prepost   up    1-infini    3:00:00     72 2:18:2       2   mixed      wbl[002,010]
-prepost   up    1-infini    3:00:00     72 2:18:2       5   allocated  wbl[001,004...
-bigmem    up    1-infini 7-00:00:00     72 2:18:2       1   down*      wbl003
-bigmem    up    1-infini 7-00:00:00     72 2:18:2       2   mixed      wbl[002,010]
-bigmem    up    1-infini 7-00:00:00     72 2:18:2       5   allocated  wbl[001,004...
-hugemem   up    1-infini 7-00:00:00    128 4:16:2       1   mixed      wbh001
+$ sinfo
+PARTITION AVAIL JOB_SIZE  TIMELIMIT   CPUS  S:C:T   NODES STATE      NODELIST
+compute*  up    1-infini 14-00:00:0    256 2:64:2       1 down*      compute-5
+compute*  up    1-infini 14-00:00:0    256 2:64:2       4 mixed      compute-[0-2,4]
+compute*  up    1-infini 14-00:00:0    256 2:64:2       1 idle       compute-3
+gpu       up    1-infini 14-00:00:0     96 2:24:2       1 idle       gpu-0
+hugemem   up    1-infini 14-00:00:0    256 2:64:2       1 mixed      hugemem-1
+hugemem   up    1-infini 14-00:00:0    256 2:64:2       1 idle       hugemem-0
+interacti up    1-infini 60-00:00:0      8  8:1:1       3 idle       interactive-[0-2]
+vgpu      up    1-infini 60-00:00:0     32 32:1:1       2 drained    vgpu-[0-1]
+vgpu      up    1-infini 60-00:00:0     32 32:1:1       1 allocated  vgpu-2
+vgpu      up    1-infini 60-00:00:0     32 32:1:1       1 idle       vgpu-3
 ```
 
 Each partition has a row for every state it's nodes are currently in.
 
-For example, the `large` partition currently has  **1** `down` node, 
-**133** `mixed` nodes,  **7** `allocated` nodes and  **85** `idle`
+For example, the `compute` partition currently has  **1** `down` node, 
+**4** `mixed` nodes,  **no** `allocated` nodes and  **0** `idle`
 nodes.
 
 The most common node states you are likely to see are:

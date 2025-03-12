@@ -78,7 +78,7 @@ this by means of the following commands.
 # Replace nesi12345 with your desired project code
 group=2024_agr12345
 startdir=$(pwd)
-# Replace /nesi/project with /nesi/nobackup if needed
+# Replace /project/<project_id> with /scratch/<project_id> if needed
 cd /project/${group}
 # Move all files, directories, etc. owned by yourself into the project group
 # The --no-dereference option updates the group of symbolic links (where permitted)

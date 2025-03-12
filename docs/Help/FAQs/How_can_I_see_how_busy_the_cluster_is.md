@@ -28,9 +28,7 @@ vgpu      up    1-infini 60-00:00:0     32 32:1:1       1 idle       vgpu-3
 
 Each partition has a row for every state it's nodes are currently in.
 
-For example, the `compute` partition currently has  **1** `down` node, 
-**4** `mixed` nodes,  **no** `allocated` nodes and  **0** `idle`
-nodes.
+For example, the `compute` partition currently has  **1** `down` node, **4** `mixed` nodes,  **no** `allocated` nodes and  **0** `idle` nodes.
 
 The most common node states you are likely to see are:
 

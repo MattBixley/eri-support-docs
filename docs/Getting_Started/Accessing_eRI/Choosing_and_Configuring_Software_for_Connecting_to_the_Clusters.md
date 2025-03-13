@@ -44,9 +44,32 @@ VSCode will detect this and show configured hosts in the 'Remote Explorer' Tab.
 
 ## Windows
 
-As Windows is not a "Unix-Like" operating system, getting access to a
-functional terminal requires some additional steps. There are several
+Recent versions of Windows bundle the
+[OpenSSH client](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh-overview),
+which is the simplest way to connect.
+
+As Windows is not a "Unix-Like" operating system, other ways to access a
+functional terminal require some additional steps. There are several
 different options, listed in order of preference.
+
+### OpenSSH for Windows
+
+Open a Windows Terminal for e.g. PowerShell, and use `ssh -K`, e.g.
+
+```
+PS> ssh -K guestsi@agresearch.co.nz@login-0.eri.agresearch.co.nz
+
+This server is the property of AgResearch Ltd.
+Unauthorised access strictly prohibited.  All access may be monitored.
+
+For known eRI platform/service issues and planned outages please see:
+https://agresearcheri.statuspage.io/
+
+Last login: Thu Mar 13 11:31:20 2025 from 10.103.202.61
+login-0$
+```
+
+The benefit of `ssh -K` in native Windows is that it uses the already-available native Kerberos ticket for authentication, and no further authentication is required.
 
 ### Ubuntu Terminal (Windows 10)
 

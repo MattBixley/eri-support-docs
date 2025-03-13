@@ -17,34 +17,34 @@ zendesk_section_id: 360000189716
 ---
 
 !!! prerequisite
-    Have an [active account and project.](../Accounts-Projects_and_Allocations/Creating_a_NeSI_Account_Profile.md)
+    Have an [active account and project.](../Getting_Started/Accounts-Projects_and_Allocations/Creating_a_NeSI_Account_Profile.md)
 
-Find more information on [the NeSI Filesystem](../../Storage/File_Systems_and_Quotas/NeSI_File_Systems_and_Quotas.md).
+Find more information on [the NeSI Filesystem](../Storage/File_Systems_and_Quotas/NeSI_File_Systems_and_Quotas.md).
 
 ## Using the Jupyter interface
 
-Many users have found the [Jupyter interface](../../Scientific_Computing/Interactive_computing_using_Jupyter/Jupyter_on_NeSI.md)
+Many users have found the [Jupyter interface](../Scientific_Computing/Interactive_computing_using_Jupyter/Jupyter_on_NeSI.md)
 useful for running code on NeSI. The Jupyter interface only
 requires a web browser; the instructions are same whether your are
 connecting from a Windows, Mac or a Linux computer.
 
 To upload a file, click on the
 
-![up arrow](../../assets/images/Moving_files_to_and_from_the_cluster.png)
+![up arrow](../assets/images/Moving_files_to_and_from_the_cluster.png)
 
 button, near the top left and generally under the Run button.
 
 To download a file, navigate the file browser on the left and
 right-click on the file to see the menu below,
 
-![right click menu](../../assets/images/Moving_files_to_and_from_the_cluster_0.png)
+![right click menu](../assets/images/Moving_files_to_and_from_the_cluster_0.png)
 
 The Download button is at the bottom.
 
 ## Standard Terminal
 
 !!! prerequisite
-    Have SSH [configured as recommended](../../Scientific_Computing/Terminal_Setup/Standard_Terminal_Setup.md)
+    Have SSH [configured as recommended](../Scientific_Computing/Terminal_Setup/Standard_Terminal_Setup.md)
 
 In a local terminal the following commands can be used to:
 
@@ -62,7 +62,7 @@ scp mahuika:<path/filename> <path/filename>
 
 !!! note
     - This will only work if you have set up aliases as described in
-      [Terminal Setup](../../Scientific_Computing/Terminal_Setup/Standard_Terminal_Setup.md).
+      [Terminal Setup](../Scientific_Computing/Terminal_Setup/Standard_Terminal_Setup.md).
     - As the terms 'maui' and 'mahuika' are defined locally, the above
       commands *only works when using a local terminal* (i.e. not on Mahuika).
     - If you are using Windows subsystem, the root paths are different
@@ -80,7 +80,7 @@ your password.
 Most file managers can be used to connect to a remote directory simply
 by typing in the address bar (provided your have an active connection to
 the cluster and your ssh config file is set up as described in
-[Standard_Terminal_Setup](../../Scientific_Computing/Terminal_Setup/Standard_Terminal_Setup.md)).
+[Standard_Terminal_Setup](../Scientific_Computing/Terminal_Setup/Standard_Terminal_Setup.md)).
 
 For Nautilus (Ubuntu default) just prepend the path you want to connect
 to with `sftp://mahuika`. (ctrl + L opens address bar)
@@ -89,11 +89,11 @@ This does not work for File Explorer (Windows default)
 
 This does not work for Finder (Mac default)
 
-![files](../../assets/images/Moving_files_to_and_from_the_cluster_1.png)
+![files](../assets/images/Moving_files_to_and_from_the_cluster_1.png)
 
 If your default file manager does not support mounting over sftp, see
 our documentation
-on [SSHFS](../../General/FAQs/Can_I_use_SSHFS_to_mount_the_cluster_filesystem_on_my_local_machine.md).
+on [SSHFS](../General/FAQs/Can_I_use_SSHFS_to_mount_the_cluster_filesystem_on_my_local_machine.md).
 
 ## MobaXterm
 
@@ -102,11 +102,11 @@ window) opens up a graphical user interface that can be used for basic
 file operations. You can drag and drop files in the file explorer or use
 the up and down arrows on the toolbar to upload and download files.
 
-![moba terminal](../../assets/images/Moving_files_to_and_from_the_cluster_2.png)
+![moba terminal](../assets/images/Moving_files_to_and_from_the_cluster_2.png)
 
 You may also transfer files as described under 'Standard Terminal'
 (provided
-[WSL](../../Scientific_Computing/Terminal_Setup/Windows_Subsystem_for_Linux_WSL.md)
+[WSL](../Scientific_Computing/Terminal_Setup/Windows_Subsystem_for_Linux_WSL.md)
 is enabled).
 
 ## WinSCP
@@ -120,7 +120,7 @@ authentication.
 
 Globus is available for those with large amounts of data, security
 concerns, or connection consistency issues.
-You can find more details on its use on our [Globus support
+You can find more details on its use on our [Globus support../Storage/Data_Transfer_Services/Data_Transfer_using_Globus_V5.md
 page](../../Storage/Data_Transfer_Services/Data_Transfer_using_Globus_V5.md).
 
 ## Rclone

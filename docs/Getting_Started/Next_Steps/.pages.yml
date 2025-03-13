@@ -1,7 +1,7 @@
 ---
 nav:
+  - File_Transfer.md
   - Submitting_your_first_job.md
   - Finding_Job_Efficiency.md
-  - Moving_files_to_and_from_the_cluster.md
-  - Parallel_Execution.md
+  - Job_Scaling.md
   - ...

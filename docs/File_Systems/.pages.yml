@@ -1,4 +1,5 @@
 nav:
+  - ../Getting_Started/Next_Steps/File_Transfer.md
   - File_Systems_and_Quotas.md
   - Scratch_Autodelete_Old_Data.md
   - File_Recovery.md

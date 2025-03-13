@@ -244,7 +244,7 @@ GB of memory. To be on the safe side, let's request 1 GB of memory and
 
 ``` sl
 #!/bin/bash -e
-#SBATCH --account=nesi99999
+#SBATCH --account=2024-mjb-tests
 #SBATCH --job-name=Scaling60k # Job name (shows up in the queue)
 #SBATCH --time=00:30:00       # Walltime (HH:MM:SS)
 #SBATCH --mem=512MB           # Memory per node

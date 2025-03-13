@@ -131,16 +131,12 @@ the compute node where it it running.
 
 If 'nodelist' is not one of the fields in the output of your `sacct` or
 `squeue` commands you can find the node a job is running on using the
-command; `squeue -h -o %N   -j <jobid>` The node will look something
-like `wbn123` on Mahuika or `nid00123` on Māui
-
-!!! Note
-     If your job is using MPI it may be running on multiple nodes
+command; `squeue -h -o %N   -j <jobid>`
 
 ### Using `htop`
 
 ```bash
-ssh -t wbn175 htop -u $USER
+ssh -t compute-0 htop -u $USER
 ```
 
 If it is your first time connecting to that particular node, you may be

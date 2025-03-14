@@ -35,7 +35,6 @@ Create a new file and open it with `nano myjob.sl`
 #SBATCH --job-name=SerialJob # job name (shows up in the queue)
 #SBATCH --time=00:01:00      # Walltime (HH:MM:SS)
 #SBATCH --mem=512MB          # Memory in MB
-#SBATCH --qos=debug          # debug QOS for high priority job tests
 
 pwd # Prints working directory
 ```
@@ -52,9 +51,7 @@ Note: if you are a member of multiple accounts you should add the line
 
 ## Testing
 
-We recommend testing your job using the debug Quality of Service (QOS).
-The debug QOS can be gained by adding the `sbatch` command line option `--qos=debug`.  
-This adds 5000 to the job priority so raises it above all non-debug jobs, but is limited to one small job per user at a time: no more than 15 minutes and no more than 2 nodes.
+Prior to submitting a large job to the cluster, we recommend running a test job to ensure that your script has no errors and runs as expected.
 
 !!! warning
     Please do not run your code on the login node.

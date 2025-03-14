@@ -19,14 +19,6 @@ command `sprio -u $USER`.
 
 Priority scores are determined by a number of factors:
 
-### Quality of Service
-
-The "debug" Quality of Service can be gained by adding the `sbatch`
-command line option `--qos=debug`.  
-This adds 5000 to the job priority so raises it above all non-debug
-jobs, but is limited to one small job per user at a time: no more than
-15 minutes and no more than 2 nodes.
-
 ### Fair Share
 
 How does it work on eRI

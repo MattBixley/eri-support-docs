@@ -182,12 +182,6 @@ the default QoS for a job being determined by the allocation class of
 its project. There are other QoSs which you can select with the
 `--qos`option:
 
-### Debug
-
-Specifying `--qos=debug` will give the job very high priority, but is
-subject to strict limits: 15 minutes per job, and only 1 job at a time
-per user. Debug jobs may not span more than two nodes.
-
 ### Interactive
 
 Specifying `--qos=interactive` will give the job very high priority, but

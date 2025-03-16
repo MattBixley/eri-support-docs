@@ -20,31 +20,27 @@ configurations.
     following (replacing **`username`** with your username):
 
 ```sh
-Host ssh.agresearch.co.nz
-    HostName ssh.agresearch.co.nz
-    User <userid>
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/agr.rsa
-    ForwardX11 yes
-    ForwardX11Trusted yes
-    ServerAliveInterval 300
-    ServerAliveCountMax 2
+ControlPath ~/.ssh/control/%C
+ControlMaster auto
+Host login-0
+   User <userid>@agresearch.co.nz
+   Hostname 10.29.107.20
+   ProxyCommand ssh -YW %h:%p login-0
+   ServerAliveInterval 300
+   ServerAliveCountMax 2
+   ForwardX11 yes
+   ForwardX11Trusted yes
 
-Host inscrutable.agresearch.co.nz
-    HostName inscrutable.agresearch.co.nz
-    ProxyJump <userid>@ssh.agresearch.co.nz
-    User <userid>
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/agr.rsa
-    ForwardX11 yes
-    ForwardX11Trusted yes
-    ServerAliveInterval 300
-    ServerAliveCountMax 2
-
-Host *
-    ControlMaster auto
-    ControlPath ~/.ssh/sockets/ssh_mux_%h_%p_%r
-    ControlPersist 1
+ControlPath ~/.ssh/control/%C
+ControlMaster auto
+Host login-1
+   User <userid>@agresearch.co.nz
+   Hostname 10.29.107.20
+   ProxyCommand ssh -YW %h:%p login-1
+   ServerAliveInterval 300
+   ServerAliveCountMax 2
+   ForwardX11 yes
+   ForwardX11Trusted yes
 ```
 
 3. Ensure the permissions are correct by
@@ -56,9 +52,9 @@ Assuming you have followed the setup above you will be able to connect
 to the clusters directly using;
 
 ```sh
-ssh eri
+ssh login-0
 ```
 
 !!! prerequisite "What Next?"
-     -   [Moving files to/from a cluster.](../../Getting_Started/Next_Steps/Moving_files_to_and_from_the_cluster.md)
-     -   Setting up an [X-Server](../../Scientific_Computing/Terminal_Setup/X11_on_NeSI.md) (optional).
+     -   [Moving files to/from a cluster.](../../File_Systems/File_Trnsfer.md)
+

@@ -2,8 +2,6 @@
 created_at: '2025-02-24T00:14:22Z'
 tags: [Globus, data, transfer]
 title: Globus Quick Start Guide
-search:
-  exclude: true
 vote_count: 0
 vote_sum: 0
 zendesk_article_id: 8117557125391

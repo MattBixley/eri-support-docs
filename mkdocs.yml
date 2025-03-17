@@ -60,7 +60,7 @@ extra_css:
   - assets/stylesheets/theme.css
 extra_javascript:
     - assets/javascripts/general.js
-    - https://status.nesi.org.nz/embed/script.js #eri status address
+    - https://agresearcheri.statuspage.io/embed/script.js #eri status address
 theme:
   custom_dir: overrides
   favicon: assets/icons/favicon.ico

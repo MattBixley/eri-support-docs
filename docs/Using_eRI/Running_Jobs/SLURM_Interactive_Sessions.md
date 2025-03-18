@@ -1,7 +1,7 @@
 ---
 created_at: '2020-01-05T21:43:18Z'
 tags: []
-title: Slurm Interactive Sessions
+title: SLURM Interactive Sessions
 vote_count: 8
 vote_sum: 2
 zendesk_article_id: 360001316356

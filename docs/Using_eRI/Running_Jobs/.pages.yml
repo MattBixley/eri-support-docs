@@ -1,6 +1,7 @@
 nav:
     - SLURM-Best_Practice.md
     - SLURM_Interactive_Sessions.md
+    - SLURM_Partitions.md
     - Parallel_Execution.md
     - ...
 

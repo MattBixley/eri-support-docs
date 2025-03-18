@@ -48,11 +48,7 @@ connections.
 Make sure the `-Y` or `-X` flag is included
 
 ``` sh
-ssh -Y user@lander.nesi.org.nz
-```
-
-``` sh
-ssh -Y login.nesi.org.nz
+ssh -Y login-0
 ```
 
 ### MobaXterm
@@ -92,7 +88,7 @@ srun --ntasks 36 --mem-per-cpu 1500 --time 01:00:00 --x11 --pty bash
 add the flag -Y when `ssh`-ing to the node.
 
 ``` sl
-ssh -Y wbn001
+ssh -Y compute-0
 ```
 
 ## XVFB

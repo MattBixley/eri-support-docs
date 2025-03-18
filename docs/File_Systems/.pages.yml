@@ -1,7 +1,7 @@
 nav:
   - File_Transfer.md
   - File_Systems_and_Quotas.md
-  - Scratch_Autodelete_Old_Data.md
+  - Scratch_Autodelete.md
   - File_Recovery.md
   - ...
 

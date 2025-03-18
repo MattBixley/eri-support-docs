@@ -5,11 +5,6 @@ tags:
 - howto
 ---
 
-!!! prerequisite
-     -   Have an [active account and project.](../../Getting_Started/Accessing_eRI/Creating_an_eRI_Account.md)
-     -   Using standard Linux/Mac terminal *or* [Windows Subsystem for Linux](../../Scientific_Computing/Terminal_Setup/Windows_Subsystem_for_Linux_WSL.md)
-         with [Ubuntu terminal](../../Scientific_Computing/Terminal_Setup/Ubuntu_LTS_terminal_Windows.md).
-
 ## First time setup
 
 The login process can be simplified significantly with a few easy
@@ -61,8 +56,4 @@ having to re-enter authentication e.g.
 scp <path/filename> login-0:~/
 ```
 
-For more info visit [data transfer](../../Getting_Started/Next_Steps/Moving_files_to_and_from_the_cluster.md).
-
-!!! prerequisite "What Next?"
-     -   [Moving files to/from a cluster.](../../Getting_Started/Next_Steps/Moving_files_to_and_from_the_cluster.md)
-     -   Setting up an [X-Server](../../Scientific_Computing/Terminal_Setup/X11_on_NeSI.md) (optional).
+For more info visit [data transfer](../../File_Systems/File_Transfer.md).

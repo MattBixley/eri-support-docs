@@ -49,7 +49,6 @@ sbatch: `hugemem` is not the most appropriate partition for this job, which woul
 <th>Max Walltime</th>
 <th>Nodes</th>
 <th>CPUs/Node</th>
-<th>GPUs/Node</th>
 <th>Available Mem/CPU</th>
 <th>Available Mem/Node</th>
 <th>Max CPUs/job</th>
@@ -60,9 +59,8 @@ sbatch: `hugemem` is not the most appropriate partition for this job, which woul
 <td>14 days</td>
 <td>6</td>
 <td>256</td>
-<td>-</td>
 <td>? MB</td>
-<td>1 T</td>
+<td>950 GB</td>
 <td>?</td>
 <td>Default partition.</td>
 </tr>
@@ -71,9 +69,8 @@ sbatch: `hugemem` is not the most appropriate partition for this job, which woul
 <td>14 days</td>
 <td>1</td>
 <td>96</td>
-<td>-</td>
 <td>? MB</td>
-<td>-</td>
+<td>470 GB</td>
 <td>?</td>
 <td></td>
 </tr>
@@ -83,8 +80,7 @@ sbatch: `hugemem` is not the most appropriate partition for this job, which woul
 <td>2</td>
 <td>256</td>
 <td>-</td>
-<td>-</td>
-<td>4 T</td>
+<td>3800 GB</td>
 <td>-</td>
 <td>Very large amounts of memory.</td>
 </tr>
@@ -93,10 +89,10 @@ sbatch: `hugemem` is not the most appropriate partition for this job, which woul
 <td>60 days</td>
 <td>3<br/></td>
 <td>8</td>
-<td>-</td>
+
 <td>-</td>
 
-<td>15 G</td>
+<td>14 GB</td>
 <td>?</td>
 <td></td>
 </tr>
@@ -106,8 +102,7 @@ sbatch: `hugemem` is not the most appropriate partition for this job, which woul
 <td>4</td>
 <td>32</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
+<td>418 GB</td>
 <td>-</td>
 <td>Virtual GPUs.</td>
 </tr>
@@ -150,16 +145,3 @@ To request A100 GPUs, use instead:
 
 See [GPU use on NeSI](../../Scientific_Computing/Running_Jobs_on_Maui_and_Mahuika/GPU_use_on_NeSI.md)
 for more details about Slurm and CUDA settings.
-
-### Limits on GPU Jobs
-
-- There is a per-project limit of 6 GPUs being used at a time.
-- There is also a per-project limit of 360 GPU-hours being allocated
-    to running jobs. This reduces the number of GPUs available for
-    longer jobs, so for example you can use 2 GPUs at a time if your
-    jobs run for a week, 5 GPUs for two days, or 6 GPUs for one day
-    jobs. The intention is to guarantee that all users can get their GPU
-    debugging jobs running in a reasonably timely manner.
-- Each GPU job can use no more than 64 CPUs. This is to ensure that
-    GPUs are not left idle just because their node has no remaining free
-    CPUs.

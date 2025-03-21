@@ -9,18 +9,6 @@ zendesk_article_id: 360000204076
 zendesk_section_id: 360000030876
 ---
 
-## General Limits
-
-- No individual job can request more than 20,000 CPU hours. This has
-    the consequence that a job can request more CPUs if it is shorter
-    (short-and-wide vs long-and-skinny).
-- No user can have more than 1,000 jobs in the queue at a time.
-
-These limits are defaults and can be altered on a per-account basis if
-there is a good reason. For example we will increase the limit on queued
-jobs for those who need to submit large numbers of jobs, provided that
-they undertake to do so with job arrays.
-
 ## Partitions
 
 A partition can be specified via the appropriate [sbatch option](../../Getting_Started/Cheat_Sheets/Slurm-Reference_Sheet.md),
@@ -40,7 +28,7 @@ partition then you may receive a warning, please do not ignore this.
 E.g.:
 
 ```out
-sbatch: `hugemem` is not the most appropriate partition for this job, which would otherwise default to `large`. If you believe this is incorrect then contact support and quote the Job ID number.
+sbatch: `hugemem` is not the most appropriate partition for this job, which would otherwise default to `compute`. If you believe this is incorrect then contact support and quote the Job ID number.
 ```
 
 <table><tbody>
@@ -50,7 +38,6 @@ sbatch: `hugemem` is not the most appropriate partition for this job, which woul
 <th>Nodes</th>
 <th>CPUs/Node</th>
 <th>Available Mem/CPU</th>
-<th>Available Mem/Node</th>
 <th>Max CPUs/job</th>
 <th>Description</th>
 </tr>
@@ -59,9 +46,8 @@ sbatch: `hugemem` is not the most appropriate partition for this job, which woul
 <td>14 days</td>
 <td>6</td>
 <td>256</td>
-<td>? MB</td>
+<td>3.7 GB</td>
 <td>950 GB</td>
-<td>?</td>
 <td>Default partition.</td>
 </tr>
 <tr>
@@ -69,19 +55,17 @@ sbatch: `hugemem` is not the most appropriate partition for this job, which woul
 <td>14 days</td>
 <td>1</td>
 <td>96</td>
-<td>? MB</td>
+<td>4.8 GB</td>
 <td>470 GB</td>
-<td>?</td>
-<td></td>
+<td>A100.</td>
 </tr>
 <tr>
 <td>hugemem</td>
 <td>14 days</td>
 <td>2</td>
 <td>256</td>
-<td>-</td>
+<td>14.9 GB</td>
 <td>3800 GB</td>
-<td>-</td>
 <td>Very large amounts of memory.</td>
 </tr>
 <tr>
@@ -89,21 +73,17 @@ sbatch: `hugemem` is not the most appropriate partition for this job, which woul
 <td>60 days</td>
 <td>3<br/></td>
 <td>8</td>
-
-<td>-</td>
-
-<td>14 GB</td>
-<td>?</td>
-<td></td>
+<td>1.8 GB</td>
+<td>14.8 GB</td>
+<td>Partition for interactive jobs.</td>
 </tr>
 <tr>
 <td>vgpu</td>
 <td>60 days</td>
 <td>4</td>
 <td>32</td>
-<td>-</td>
+<td>13 GB</td>
 <td>418 GB</td>
-<td>-</td>
 <td>Virtual GPUs.</td>
 </tr>
 </tbody>
@@ -118,30 +98,28 @@ its project. There are other QoSs which you can select with the
 
 ### Interactive
 
-Specifying `--qos=interactive` will give the job very high priority, but
-is subject to some limits: up to 4 jobs, 16 hours duration, 4 CPUs, 128
-GB, and 1 GPU.
+Specifying `--qos=interactive` will give a very high priority interactive job.
 
 ## Requesting GPUs
 
 |                        |                                                                                                                                                |
 |------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GPU code**           | **GPU type**                                                                                                                                   |
-
 | A100 (`gpu` partition) | NVIDIA Tesla A100 PCIe 40GB cards                                                                                                              |
 | vgpu | NVIDIA A10 GPGPU, PCIe 24GB cards                                              |
 
-The default GPU type is P100, of which you can request 1 or 2 per node. The vgpu partition contains four virtualised compute nodes, each with a single NVIDIA A10 GPGPU, PCIe 24GB cards.
+The default GPU type is A100. The vgpu partition contains four virtualised compute nodes, each with a single NVIDIA A10 GPGPU, PCIe 24GB cards.
+
+To request for the A100 GPU:
 
 ``` sl
-#SBATCH --gpus-per-node=1     # or equivalently, P100:1
+#SBATCH --partition     gpu
+#SBATCH --gpus-per-node 1   # GPU resources required per node
 ```
 
-To request A100 GPUs, use instead:
+To request for vGPUs, use instead:
 
 ``` sl
-#SBATCH --gpus-per-node=A100:1
+#SBATCH --partition     vgpu
+#SBATCH --gpus-per-node 1
 ```
-
-See [GPU use on NeSI](../../Scientific_Computing/Running_Jobs_on_Maui_and_Mahuika/GPU_use_on_NeSI.md)
-for more details about Slurm and CUDA settings.

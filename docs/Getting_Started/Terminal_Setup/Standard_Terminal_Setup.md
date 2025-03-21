@@ -57,3 +57,6 @@ scp <path/filename> login-0:~/
 ```
 
 For more info visit [data transfer](../../File_Systems/File_Transfer.md).
+
+1473709      bash                 2024-proxy_development_methane biltont@agresea RUNN      26:00    7:34:00 compute-0 2 16G (null)
+srun --nodelist=compute-0 --pty bash mem=16G

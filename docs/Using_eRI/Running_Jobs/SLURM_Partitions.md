@@ -33,12 +33,12 @@ sbatch: `hugemem` is not the most appropriate partition for this job, which woul
 
 <table><tbody>
 <tr>
-<th>Name</th>
+<th>Partition</th>
 <th>Max Walltime</th>
 <th>Nodes</th>
 <th>CPUs/Node</th>
 <th>Available Mem/CPU</th>
-<th>Max CPUs/job</th>
+<th>Available Mem/Node</th>
 <th>Description</th>
 </tr>
 <tr>
@@ -74,7 +74,7 @@ sbatch: `hugemem` is not the most appropriate partition for this job, which woul
 <td>3<br/></td>
 <td>8</td>
 <td>1.8 GB</td>
-<td>14.8 GB</td>
+<td>14.5 GB</td>
 <td>Partition for interactive jobs.</td>
 </tr>
 <tr>
@@ -98,11 +98,10 @@ its project. There are other QoSs which you can select with the
 
 ### Interactive
 
-Specifying `--qos=interactive` will give a very high priority interactive job.
+Specifying `--qos=interactive` will give a very high priority [interactive job](SLURM_Partitions.md).
 
 ## Requesting GPUs
 
-|                        |                                                                                                                                                |
 |------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GPU code**           | **GPU type**                                                                                                                                   |
 | A100 (`gpu` partition) | NVIDIA Tesla A100 PCIe 40GB cards                                                                                                              |

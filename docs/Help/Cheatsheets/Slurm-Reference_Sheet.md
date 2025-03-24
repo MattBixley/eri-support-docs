@@ -56,6 +56,7 @@ an '=' sign e.g. `#SBATCH --account=nesi99999` or a space e.g.
 | `--mail-type`  | `#SBATCH --mail-type=ALL`               | Will send a mail notification at `BEGIN END FAIL`.                                                            |
 |                  | `#SBATCH --mail-type=TIME_LIMIT_80`     | Will send message at *80%* walltime.                                                                           |
 | `--no-requeue` | `#SBATCH --no-requeue`                  | Will stop job being requeued in the case of node failure.                                                       |
+| `--acctg-freq` | `#SBATCH --acctg-freq` | Change the default value (every 30s) when slurm captures job information. 
 
 ### Parallel options
 

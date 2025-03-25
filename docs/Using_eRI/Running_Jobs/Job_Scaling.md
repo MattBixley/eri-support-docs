@@ -32,13 +32,7 @@ Some jobs will also need to request GPUs.
 When you are initially trying to set up your jobs it can be difficult to
 ascertain how much of each of these resources you will need.
 Asking for too little or too much, however, can both cause problems:
-your jobs will
-be at increased risk of taking a long time in the queue or failing, and
-your project's [fair share score](../../Scientific_Computing/Running_Jobs_on_Maui_and_Mahuika/Fair_Share.md)
-is likely to suffer.
-Your project's fair share score will be reduced in
-view of compute time spent regardless of whether you obtain a result or
-not.
+your jobs will be at increased risk of taking a long time in the queue or failing.
 
 | Resource | Asking for too much | Not asking for enough |
 |---|---|---|
@@ -71,5 +65,5 @@ will not have waited for hours or days in the queue
 beforehand.
 
 !!! example
-     - [Multithreading Scaling](../../Getting_Started/Next_Steps/Multithreading_Scaling_Example.md)
-     - [MPI Scaling](../../Getting_Started/Next_Steps/MPI_Scaling_Example.md)
+     - [Multithreading Scaling](Multithreading_Scaling_Example.md)
+     - [MPI Scaling](MPI_Scaling_Example.md)

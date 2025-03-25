@@ -43,16 +43,14 @@ etc).
 ### Memory (RAM)
 
 If you request more memory (RAM) than you need for your job, it
-[will wait longer in the queue and will be more expensive when it runs](../../General/FAQs/Why_is_my_job_taking_a_long_time_to_start.md).
-On the other hand, if you don't request enough memory, the job may be
-killed for attempting to exceed its allocated memory limits.
+will wait longer in the queue. On the other hand, if you don't request enough memory, the job may be killed for attempting to exceed its allocated memory limits.
 
 We recommend that you request a little more RAM, but not much more, than
 your program will need at peak memory usage.
 
 We also recommend using `--mem` instead of `--mem-per-cpu` in most
 cases. There are a few kinds of jobs for which `--mem-per-cpu` is more
-suitable. See [our article on how to request memory](../../General/FAQs/How_do_I_request_memory.md)
+suitable. See [our article on how to request memory](https://docs.nesi.org.nz/General/FAQs/How_do_I_request_memory/)
 for more information.
 
 ## Parallelism
@@ -71,37 +69,3 @@ mechanism of managing a collection of batch jobs with identical resource
 requirements. Most Slurm commands can manage job arrays either as
 individual elements (tasks) or as a single entity (e.g. delete an entire
 job array in a single command)
-
-## Fairshare
-
-A low fairshare score will affect your jobs priority in the queue, learn
-more about how to effectively use your allocation
-[here](../../Scientific_Computing/Running_Jobs_on_Maui_and_Mahuika/Fair_Share_How_jobs_get_prioritised.md).
-
-## Cross machine submission
-
-Jobs can be submitted from one machine to another by using the
-`--cluster` option. E.g. submitting a job from Māui\_Ancil to Māui.
-
-By default the environment (modules and variables) will be inherited
-from the submitting shell into the job environment. But the environments
-vary between our different machines, including module names, location of
-slurm tools, etc., which could cause issues in this inheriting case. We
-suggest to use the environment variable `SBATCH_EXPORT=NONE` (do NOT us
-`--export=none` option) in the submitting shell. Therefore we suggest to
-submit a job, e.g. to Māui using:
-
-``` sh
-SBATCH_EXPORT=NONE sbatch --cluster=maui job.sl
-```
-
-Please note: Above we only discussed the transition from your submitting
-environment to the job environment. The latter is the one your job
-script is running in. There is another environment created for your
-parallel application (when called srun). There we want to inherit from
-the job environment to have PATHs and setting available. Therefore,
-avoid setting `SBATCH_EXPORT=NONE` in your job script or in .bashrc or
-.profile for all cases. The slurm `--export=none` option would prevent
-inhering environments in both transitions. Another note: Alternatively
-you can set `SLURM_EXPORT_ENV=ALL` in your job script to enable the
-environment forwarding to the srun environment.

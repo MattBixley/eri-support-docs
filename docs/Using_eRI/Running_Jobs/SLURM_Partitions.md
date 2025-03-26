@@ -98,7 +98,7 @@ its project. There are other QoSs which you can select with the
 
 ### Interactive
 
-Specifying `--qos=interactive` will give a very high priority [interactive job](SLURM_Partitions.md).
+Specifying `--qos=interactive` will give a very high priority [interactive job](SLURM_Interactive_Sessions.md).
 
 ## Requesting GPUs
 

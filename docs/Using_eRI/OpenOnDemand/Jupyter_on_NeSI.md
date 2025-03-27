@@ -13,16 +13,11 @@ zendesk_article_id: 360001555615
 zendesk_section_id: 360001189255
 ---
 
-!!! Note
-     This service is available for users with a current allocation on
-     Mahuika only.  
-     Please {% include "partials/support_request.html" %} to request a suitable
-     allocation.
 
 ## Introduction
 
 NeSI supports the use of [Jupyter](https://jupyter.org/) for
-[interactive computing](../../Scientific_Computing/Running_Jobs_on_Maui_and_Mahuika/Slurm_Interactive_Sessions.md).
+[interactive computing](../Running_Jobs/SLURM_Interactive_Sessions.md).
 Jupyter allows you to create notebooks that contain live code,
 equations, visualisations and explanatory text. There are many uses for
 Jupyter, including data cleaning, analytics and visualisation, machine
@@ -31,25 +26,19 @@ submissions](../../Getting_Started/Next_Steps/Submitting_your_first_job.md)
 and workflows and much more.
 
 !!! prerequisite "See also"
-     -   See the [RStudio via Jupyter on NeSI](../../Scientific_Computing/Interactive_computing_using_Jupyter/RStudio_via_Jupyter_on_NeSI.md)
+     -   See the [RStudio via Jupyter on Open OnDemand](RStudio.md)
          page for launching an RStudio instance.
-     -   See the [MATLAB via Jupyter on NeSI](../../Scientific_Computing/Interactive_computing_using_Jupyter/MATLAB_via_Jupyter_on_NeSI.md)
-         page for launching MATLAB via Jupyter
-     -   See the [Virtual Desktop via Jupyter on NeSI](../../Scientific_Computing/Interactive_computing_using_Jupyter/Virtual_Desktop_via_Jupyter_on_NeSI.md)
+     -   See the [Virtual Desktop via Jupyter on Open OnDemand](Virtual_Desktop.md)
          page for launching a virtual desktop via Jupyter.
-     -   See the [Jupyter kernels - Tool-assisted management](../../Scientific_Computing/Interactive_computing_using_Jupyter/Jupyter_kernels_Tool_assisted_management.md)
-         (recommended) and [Jupyter kernels - Manual management](../../Scientific_Computing/Interactive_computing_using_Jupyter/Jupyter_kernels_Manual_management.md)
+     -   See the [Jupyter kernels - Tool-assisted management](Jupyter_kernels_Tool_assisted_management.md)
+         (recommended) and [Jupyter kernels - Manual management](Jupyter_kernels_Manual_management.md)
          pages for adding kernels.
 
-## Accessing Jupyter on NeSI
+## Accessing Jupyter on eRI
 
-Jupyter at NeSI is powered by [JupyterHub](https://jupyter.org/hub), a
-multi-user hub that spawns, manages and proxies multiple instances of
-the single-user Jupyter server.
+The Open OnDemand (OOD) web interface allows AgResearch staff to access the Jupyter via a web browser.
 
-### Access NeSI's JupyterHub here
-
-[https://jupyter.nesi.org.nz](https://jupyter.nesi.org.nz)
+[https://ondemand.eri.agresearch.co.nz/](https://ondemand.eri.agresearch.co.nz/)
 
 When you log in with your [NeSI credentials](../../Getting_Started/Accessing_eRI/Setting_Up_and_Resetting_Your_Password.md)
 you will be taken to the "Server Options" page, where typical job

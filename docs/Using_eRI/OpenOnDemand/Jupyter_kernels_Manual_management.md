@@ -220,7 +220,7 @@ support page.
 
 You can configure custom R kernels for running your Jupyter notebooks.
 The following example will create a custom kernel based on the
-R/3.6.2-gimkl-2020a environment module and will additionally load an
+R/4.4.1-gimkl-2020a environment module and will additionally load an
 MPFR environment module (e.g. if you wanted to load the Rmpfr package).
 
 In a terminal run the following commands to load the required
@@ -228,8 +228,8 @@ environment modules:
 
 ``` sh
 module purge
-module load IRkernel/1.1.1-gimkl-2020a-R-3.6.2
-module load Python/3.8.2-gimkl-2020a
+module load IRkernel/1.3.1-foss-2023a-R-4.4.1
+module load Python/3.11.6-foss-2023a
 ```
 
 The IRkernel module loads the R module as a dependency and provides the
@@ -239,17 +239,17 @@ Jupyter is written in Python).
 Now create an R Jupyter kernel based on your new conda environment:
 
 ``` sh
-R -e "IRkernel::installspec(name='myrwithmpfr', displayname = 'R with MPFR', user = TRUE)"
+R -e "IRkernel::installspec(name='r4.4.1', displayname = 'R/4.4.1', user = TRUE)"
 ```
 
 We must now to edit the kernel to load the required NeSI environment
 modules when the kernel is launched. Change to the directory the
 kernelspec was installed to
-(~/.local/share/jupyter/kernels/myrwithmpfr,* *assuming you kept *--name
-myrwithmpfr* in the above command):
+(~/.local/share/jupyter/kernels/r4.4.1,* *assuming you kept *--name
+r4.4.1* in the above command):
 
 ``` sh
-cd ~/.local/share/jupyter/kernels/myrwithmpfr
+cd ~/.local/share/jupyter/kernels/r4.4.1
 ```
 
 Now create a wrapper script in that directory, called *wrapper.sh*, with
@@ -260,8 +260,8 @@ the following contents:
 
 # load required modules here
 module purge
-module load MPFR/4.0.2-GCCcore-9.2.0
-module load IRkernel/1.1.1-gimkl-2020a-R-3.6.2
+module load R/4.4.1-foss-2023a
+module load IRkernel/1.3.1-foss-2023a-R-4.4.1
 
 # run the kernel
 exec R $@
@@ -280,23 +280,18 @@ something like this (change &lt;username&gt; to your NeSI username):
 ```json
 {
  "argv": [
- "/home/<username>/.local/share/jupyter/kernels/myrwithmpfr/wrapper.sh",
+ "/home/<username>/.local/share/jupyter/kernels/r4.4.1/wrapper.sh",
  "--slave",
  "-e",
  "IRkernel::main()",
  "--args",
  "{connection_file}"
  ],
- "display_name": "R with MPFR",
+ "display_name": "R/4.4.1",
  "language": "R"
 }
 ```
 
 After refreshing JupyterLab your new R kernel should show up in the
-Launcher as "R with MPFR".
+Launcher as "R/4.4.1".
 
-## Spark
-
-At the time of writing, the latest stable version of Spark does not
-support Python 3.8. If you wish to use Spark (e.g. PySpark) make sure
-you select one of our Python 3.7.3 or Anaconda3 kernels.

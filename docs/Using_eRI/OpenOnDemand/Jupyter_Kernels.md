@@ -10,15 +10,7 @@ zendesk_section_id: 360001189255
 
 ## Introduction
 
-Jupyter kernels execute the code that you write. The following Jupyter
-kernels are installed by default and can be selected from the Launcher:
-
-- Python 3.8.2
-- Python 3.8.1
-- Python 3.7.3
-- Anaconda3
-- R 4.0.1
-- R 3.6.1
+Jupyter kernels execute the code that you write. 
 
 Many packages are preinstalled in our default Python and R environments
 and these can be extended further as described on the
@@ -220,15 +212,15 @@ support page.
 
 You can configure custom R kernels for running your Jupyter notebooks.
 The following example will create a custom kernel based on the
-R/4.4.1-gimkl-2020a environment module and will additionally load an
-MPFR environment module (e.g. if you wanted to load the Rmpfr package).
+R/4.4.1-foss-2023a environment module.
 
 In a terminal run the following commands to load the required
 environment modules:
 
 ``` sh
 module purge
-module load IRkernel/1.3.1-foss-2023a-R-4.4.1
+module load JupyterLab/2024.05.0-foss-2023a-4.2.0
+module load IRkernel/1.3.2-foss-2023a-R-4.4.1
 module load Python/3.11.6-foss-2023a
 ```
 
@@ -236,7 +228,7 @@ The IRkernel module loads the R module as a dependency and provides the
 R kernel for Jupyter. Python is required to install the kernel (since
 Jupyter is written in Python).
 
-Now create an R Jupyter kernel based on your new conda environment:
+To create the kernel:
 
 ``` sh
 R -e "IRkernel::installspec(name='r4.4.1', displayname = 'R/4.4.1', user = TRUE)"
@@ -260,8 +252,7 @@ the following contents:
 
 # load required modules here
 module purge
-module load R/4.4.1-foss-2023a
-module load IRkernel/1.3.1-foss-2023a-R-4.4.1
+module load IRkernel/1.3.2-foss-2023a-R-4.4.1
 
 # run the kernel
 exec R $@
@@ -280,7 +271,7 @@ something like this (change &lt;username&gt; to your NeSI username):
 ```json
 {
  "argv": [
- "/home/<username>/.local/share/jupyter/kernels/r4.4.1/wrapper.sh",
+ "/home/agresearch.co.nz/<username>/.local/share/jupyter/kernels/r4.4.1/wrapper.sh",
  "--slave",
  "-e",
  "IRkernel::main()",

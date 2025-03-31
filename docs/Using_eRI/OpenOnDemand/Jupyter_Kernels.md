@@ -1,7 +1,7 @@
 ---
 created_at: '2022-01-31T20:45:43Z'
 tags: []
-title: Jupyter kernels - Manual management
+title: Jupyter Kernels
 vote_count: 1
 vote_sum: 1
 zendesk_article_id: 4414951820559
@@ -19,13 +19,6 @@ and these can be extended further as described on the
 pages.
 
 ## Adding a custom Python kernel
-
-!!! note "see also"
-     See the [Jupyter kernels - Tool-assisted
-     management](Jupyter_kernels_Tool_assisted_management.md)
-     page for the **preferred** way to register kernels, which uses the
-     `nesi-add-kernel` command line tool to automate most of these manual
-     steps.
 
 You can configure custom Python kernels for running your Jupyter
 notebooks. This could be necessary and/or recommended in some
@@ -252,7 +245,7 @@ the following contents:
 
 # load required modules here
 module purge
-module load IRkernel/1.3.2-foss-2023a-R-4.4.1
+module load R/4.4.1-foss-2023a
 
 # run the kernel
 exec R $@

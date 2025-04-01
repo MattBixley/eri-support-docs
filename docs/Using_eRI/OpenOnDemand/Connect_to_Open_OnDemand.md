@@ -6,7 +6,7 @@ Start computing immediately. A simple interface makes Open OnDemand easy to lear
 
 The Open OnDemand (OOD) web interface allows AgResearch staff to access the eRI via a web browser. This article explains how to connect to it. 
 
-blue book Instructions
+## Instructions
 
 Ensure you are connected the the AgResearch network (direct or via VPN):
 
@@ -20,7 +20,3 @@ Find helpful links in the ‘Help’ menu on the top of the screen.
 
 Select from the options of the top menu bar.
 Apps are presented as cards so users can launch an instance in a very simple way. 
-
-Open OnDemand is simplifying HPC access to scheduled compute resources for both interactive and non-interactive workloads.
-
-Find the Job Composer (submission templates), browse the project directories and access files, visualise results using available apps.
